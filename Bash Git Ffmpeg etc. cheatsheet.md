@@ -45,7 +45,6 @@
 </code></pre>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token comment"># rename files </span>
 <span class="token function">rename</span> <span class="token string">"s/old_extension/new_extension/"</span> *.txt  <span class="token comment"># extensions in all txt</span>
-
 <span class="token comment"># rename files wich contain "map_roads" in file_name to "map_roads_old" in all subfolders town03_*/*txt</span>
 <span class="token function">rename</span> <span class="token string">'s/map_roads/map_roads_old/'</span> town03_*/*txt 
 </code></pre>
@@ -55,7 +54,6 @@
 <h2 id="video---ffmpeg">Video - ffmpeg</h2>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token comment"># ffmpeg - create video from frames</span>
 ffmpeg -framerate 25 -pattern_type glob -i <span class="token string">'frames/*.png'</span> -c:v libx264 -r 30 -pix_fmt yuv420p <span class="token variable"><span class="token variable">`</span>out_video.mp4<span class="token variable">`</span></span>
-
 <span class="token comment"># short versions</span>
 ffmpeg -framerate 10  -i frames/%10d.png out_video.mp4
 ffmpeg -framerate 10 -pattern_type glob -i frames/*.png out_video.mp4
@@ -85,9 +83,10 @@ datetime<span class="token punctuation">.</span>datetime<span class="token punct
 3 - update master -&gt; co master; pull
 4 - co my_branch; merge master
 </code></pre>
-<pre><code># undo n local commits
-git reset --soft HEAD~n  # will erase work!!! stash before
+<pre><code># undo n LOCAL commits
+git reset HEAD~n  # keep the work
 </code></pre>
+<p><a href="https://stackoverflow.com/questions/33780083/how-to-use-pycharm-as-a-git-diff-tool-from-the-command-line/47712453#47712453">How to use PyCharm as a diff tool</a></p>
 <h2 id="ubuntu">Ubuntu</h2>
 <pre class=" language-bash"><code class="prism  language-bash"><span class="token comment"># restart network manager</span>
 <span class="token function">sudo</span> <span class="token function">service</span> network-manager restart 
