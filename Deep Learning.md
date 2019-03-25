@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deep Learning</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-</head>
-
-<body class="stackedit">
-  <div class="stackedit__html"><p>[TOC]</p>
-<h1 id="overview-papers">Overview Papers</h1>
-<ul>
-<li>[TOC]
-
+[TOC]
 
 # Overview Papers
  - Awesome deep learning papers  - [github link]([https://github.com/terryum/awesome-deep-learning-papers(https://github.com/terryum/awesome-deep-learning-papers))
@@ -64,5 +50,5 @@ Is it possible to train high quality instance segmentation models without comple
 
 > Written with [StackEdit](https://stackedit.io/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTM2OTA4MzVdfQ==
+eyJoaXN0b3J5IjpbLTk5NjA3NDI2NF19
 -->
