@@ -77,9 +77,21 @@ Particularly, UnitBox takes advantage of a novel Intersection over Union (IoU) l
 Faster converge, more robust than L2 loss.<br>
 Show results on face data set.</p>
 <p><img src="https://www.dropbox.com/s/feb0k0b64f7y9y0/l2_iou_loss.jpg?raw=1" alt="img"></p>
-<p><em>L2 Loss</em></p>
-<pre><code>
+<pre><code>input: feature_map_pixel[i, j] with feature_vector
+e.g. center pixel from some region proposal algorithms 
+output: bounding box (bbox) - top, bottom, left, right (t, b, l, r) distances from pixel
+how: regression which predict bbox t, b, l, r from feature_vector
 </code></pre>
+<p><em>L2 Loss</em><br>
+<code>SumSquares(gt_tblr, pred_tblr)</code></p>
+<ul>
+<li>4 values optimizes separably, *but * them correlated.<br>
+Frequent error: one or two bounds of a predicted box are very close to the gt but the entire bounding box is unacceptable.</li>
+<li>Bigger bboxes have bigger impact to the loss f. (bigger distances from center pxl to bounds)<br>
+Overcome with image patches  normalization, but still have negative effect to detection.</li>
+</ul>
+<p><em>IoU Loss</em><br>
+<img src="https://www.dropbox.com/s/ekpmpqipx2lh12d/IoULossAlgo.jpg?raw=1" alt="iouLoss"></p>
 <h3 id="triplet-loss">Triplet Loss</h3>
 <p>Andrew Ng video - <a href="https://www.coursera.org/learn/convolutional-neural-networks/lecture/HuUtN/triplet-loss">link</a></p>
 <pre><code>Given 3 samples: anchor -a, positive -p and negative -n:
