@@ -92,6 +92,20 @@ Overcome with image patches  normalization, but still have negative effect to de
 </ul>
 <p><em>IoU Loss</em><br>
 <img src="https://www.dropbox.com/s/ekpmpqipx2lh12d/IoULossAlgo.jpg?raw=1" alt="iouLoss"></p>
+<p><em>UnitBox Net</em><br>
+<code>Input: 1) orig img 2) pixelwise conf heatmap - object mask 3) bbox heatmap -&gt; gt bbox</code><br>
+2 branches net</p>
+<pre><code>1st branch: 
+   VGG16-4th block-&gt;CONV[512x3x3x1] (1-output_size)-&gt; 
+   Upsample[DE-CONV] -&gt; 1-channel feature_map with orig_ima size
+   sigmoid cross-entropy loss -&gt; conf_scores
+</code></pre>
+<pre><code>2nd branch: 
+   VGG16-5th block-&gt;CONV[512x3x3x4] (4-output_size)-&gt; 
+   Upsample[DE-CONV] -&gt; 4-channel feature_map with orig_ima size
+   ReLU[ensure positive values] -&gt; IoULoss -&gt; box coordiantes t, b, l, r 
+</code></pre>
+<p>The final loss is calculated as the weighted average over the losses of the two branches.</p>
 <h3 id="triplet-loss">Triplet Loss</h3>
 <p>Andrew Ng video - <a href="https://www.coursera.org/learn/convolutional-neural-networks/lecture/HuUtN/triplet-loss">link</a></p>
 <pre><code>Given 3 samples: anchor -a, positive -p and negative -n:
