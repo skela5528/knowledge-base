@@ -107,7 +107,8 @@ Overcome with image patches  normalization, but still have negative effect to de
 </code></pre>
 <p>The final loss is calculated as the weighted average over the losses of the two branches.</p>
 <h3 id="triplet-loss">Triplet Loss</h3>
-<p>Andrew Ng video - <a href="https://www.coursera.org/learn/convolutional-neural-networks/lecture/HuUtN/triplet-loss">link</a></p>
+<p>Andrew Ng video - <a href="https://www.coursera.org/learn/convolutional-neural-networks/lecture/HuUtN/triplet-loss">link</a><br>
+Force that similar things will have embedded features with high similarity score.</p>
 <pre><code>Given 3 samples: anchor -a, positive -p and negative -n:
 
    d - distance function e.g. d(a, p)=L2_norm(f(a), f(p))
