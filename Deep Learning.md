@@ -66,17 +66,22 @@ Is it possible to train high quality instance segmentation models without comple
 <h1 id="pruning">Pruning</h1>
 <h1 id="activation-units">Activation Units</h1>
 <h1 id="face-recognition">Face Recognition</h1>
-<p><strong>Deep Face Recognition: A Survey</strong> [2018 cit 14] [link]](<a href="https://arxiv.org/pdf/1804.06655.pdf">https://arxiv.org/pdf/1804.06655.pdf</a>))</p>
+<p><strong>Deep Face Recognition: A Survey</strong> [2018 cit 14] <a href="https://arxiv.org/pdf/1804.06655.pdf">link</a></p>
 <p><strong>UnitBox: An Advanced Object Detection Network</strong> [2016 cit 84] <a href="https://arxiv.org/pdf/1608.01471.pdf">link</a></p>
 <blockquote>
-<p>The paper proposes a highly effective and efficient CNNbased object<br>
-detection network, called UnitBox. Particularly, UnitBox takes advantage of a novel Intersection over Union (IoU) loss function for bounding box prediction.</p>
+<p>The paper proposes a highly effective and efficient CNNbased object detection network, called UnitBox.<br>
+Predict the object bounds as well as the pixel-wise classification scores on the feature maps.<br>
+Particularly, UnitBox takes advantage of a novel Intersection over Union (IoU) loss function for bounding box prediction.</p>
 </blockquote>
 <p>Replacing L2 localization loss of each coordinate with IOU loss (log of IOU), which links all the coordinated together, since the bounds of an object are highly correlated.<br>
 Faster converge, more robust than L2 loss.<br>
 Show results on face data set.</p>
+<p><img src="https://www.dropbox.com/s/feb0k0b64f7y9y0/l2_iou_loss.jpg?raw=1" alt="img"></p>
+<p><em>L2 Loss</em></p>
+<pre><code>
+</code></pre>
 <h3 id="triplet-loss">Triplet Loss</h3>
-<p>Ng video - <a href="https://www.coursera.org/learn/convolutional-neural-networks/lecture/HuUtN/triplet-loss">link</a></p>
+<p>Andrew Ng video - <a href="https://www.coursera.org/learn/convolutional-neural-networks/lecture/HuUtN/triplet-loss">link</a></p>
 <pre><code>Given 3 samples: anchor -a, positive -p and negative -n:
 
    d - distance function e.g. d(a, p)=L2_norm(f(a), f(p))
