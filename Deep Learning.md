@@ -63,6 +63,12 @@ Is it possible to train high quality instance segmentation models without comple
 <p><em>How?</em> - #TODO</p>
 <h1 id="anomaly-and-action-detection-in-video">Anomaly and Action Detection in Video</h1>
 <h1 id="self-driving-cars--trajectories">Self Driving Cars / Trajectories</h1>
+<p><strong>Social LSTM: human trajectory prediction in crowded spaces</strong> [2016 cit 357] <a href="http://cvgl.stanford.edu/papers/CVPR16_Social_LSTM.pdf">link</a><br>
+Humans moving in crowded scenes adapt their motion based on the behaviour of other people in their vicinity.<br>
+Such deviation in trajectory cannot be predicted by observing the person in isolation.</p>
+<p>One LSTM for each person. This LSTM learns the state of the person and predicts their future positions. The vanilla LSTM is agnostic to the behaviour of other sequences. We address this limitation by connecting neighboring LSTMs through a new social pooling strategy.</p>
+<p>Many to many LSTM: from input historical trajectory[(X<sub>1</sub>,Y<sub>1</sub>), …, (X<sub>obs</sub>, Y<sub>obs</sub>)] predict future  trajectory [(X<sub>obs+1</sub>,Y<sub>obs+1</sub>), …, (X<sub>pred</sub>, Y<sub>pred</sub>)]</p>
+<p>During test time, we observe a trajectory for 3.2secs and predict their paths for the next 4.8secs. At a frame rate of 0.4, this corresponds to observing 8 frames and predicting for the next 12 frames.</p>
 <h1 id="pruning">Pruning</h1>
 <h1 id="activation-units">Activation Units</h1>
 <h1 id="face-recognition">Face Recognition</h1>
