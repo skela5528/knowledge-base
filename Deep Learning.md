@@ -71,6 +71,7 @@ Such deviation in trajectory cannot be predicted by observing the person in isol
 <p>During test time, we observe a trajectory for 3.2secs and predict their paths for the next 4.8secs. At a frame rate of 0.4, this corresponds to observing 8 frames and predicting for the next 12 frames.</p>
 <h1 id="pruning">Pruning</h1>
 <h1 id="activation-units">Activation Units</h1>
+<p><img src="https://www.dropbox.com/s/qzuznr1ukcw8y0s/activations.jpg?raw=1" alt="activation functions"></p>
 <h1 id="face-recognition">Face Recognition</h1>
 <p><strong>Deep Face Recognition: A Survey</strong> [2018 cit 14] <a href="https://arxiv.org/pdf/1804.06655.pdf">link</a></p>
 <p><strong>UnitBox: An Advanced Object Detection Network</strong> [2016 cit 84] <a href="https://arxiv.org/pdf/1608.01471.pdf">link</a></p>
