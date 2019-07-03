@@ -16,8 +16,14 @@
 <li><a href="#segmentation">Segmentation</a></li>
 <li><a href="#unsupervised">Unsupervised</a></li>
 <li><a href="#anomaly-and-action-detection-in-video">Anomaly and Action Detection in Video</a></li>
-<li><a href="#self-driving-cars--trajectories">Self Driving Cars / Trajectories</a></li>
+<li><a href="#self-driving-cars">Self Driving Cars</a>
+<ul>
+<li><a href="#trajectory-prediction">Trajectory prediction</a></li>
+<li><a href="#environmental-model">Environmental model</a></li>
+</ul>
+</li>
 <li><a href="#pruning">Pruning</a></li>
+<li><a href="#convolution-layers">Convolution Layers</a></li>
 <li><a href="#activation-units">Activation Units</a></li>
 <li><a href="#face-recognition">Face Recognition</a>
 <ul>
@@ -62,14 +68,57 @@ Is it possible to train high quality instance segmentation models without comple
 <p><em>Tasks</em>: (1) given a set of categories of interest, a small subset has instance mask annotations, while the other categories have only bounding box annotations; (2) the instance segmentation algorithm should utilize this data to fit a model that can segment instances of all object categories in the set of interest.</p>
 <p><em>How?</em> - #TODO</p>
 <h1 id="anomaly-and-action-detection-in-video">Anomaly and Action Detection in Video</h1>
-<h1 id="self-driving-cars--trajectories">Self Driving Cars / Trajectories</h1>
+<h1 id="self-driving-cars">Self Driving Cars</h1>
+<h2 id="trajectory-prediction">Trajectory prediction</h2>
 <p><strong>Social LSTM: human trajectory prediction in crowded spaces</strong> [2016 cit 357] <a href="http://cvgl.stanford.edu/papers/CVPR16_Social_LSTM.pdf">link</a><br>
 Humans moving in crowded scenes adapt their motion based on the behaviour of other people in their vicinity.<br>
 Such deviation in trajectory cannot be predicted by observing the person in isolation.</p>
 <p>One LSTM for each person. This LSTM learns the state of the person and predicts their future positions. The vanilla LSTM is agnostic to the behaviour of other sequences. We address this limitation by connecting neighboring LSTMs through a new social pooling strategy.</p>
 <p>Many to many LSTM: from input historical trajectory[(X<sub>1</sub>,Y<sub>1</sub>), …, (X<sub>obs</sub>, Y<sub>obs</sub>)] predict future  trajectory [(X<sub>obs+1</sub>,Y<sub>obs+1</sub>), …, (X<sub>pred</sub>, Y<sub>pred</sub>)]</p>
 <p>During test time, we observe a trajectory for 3.2secs and predict their paths for the next 4.8secs. At a frame rate of 0.4, this corresponds to observing 8 frames and predicting for the next 12 frames.</p>
+<p><strong>Short-term Motion Prediction of Traffic Actors for Autonomous Driving using Deep Convolutional Networks</strong> (<em>Uber</em>) [2018 cit 10] <a href="https://arxiv.org/pdf/1808.05819.pdf">link</a><br>
+<em>Main topic</em> - predicting future state of autonomous vehicle’s surrounding.<br>
+Good related works survey.</p>
+<p><em>Input</em><br>
+State of each actor: bounding box, position, velocity, acceleration, heading, and heading change rate.<br>
+Maps: road and crosswalk locations, lane directions, lane boundaries etc.</p>
+<p><em>Target</em><br>
+Predict future x,y locations of all actors. Time step 0.1s, prediction horizon 3s.</p>
+<p><em>Data</em><br>
+Real world Uber data, 240 hours manually driving, not published.</p>
+<p><em>Approach</em></p>
+<ul>
+<li>Instead of manually defining features that represent context for each actor, we propose to rasterize scene for the i-th actor at time step tj into an RGB image. Then, we train CNN using rasterized images as inputs to predict actor trajectory, where the network automatically infers relevant features.</li>
+<li>Separate raster-image created for each actor.</li>
+<li>Loss: Average distance(true_location, predicted_location)</li>
+<li>Net: base CNN extract features from raster-image and concatenate with state vector (velocity, acceleration, heading change) -&gt; fully_connected(4096) -&gt; output 30 location coordinates (for 3 sec horizon).</li>
+</ul>
+<p>Used CNN (no LSTM or other RNN), in which all temporal data (past trajectory) encoded in one raster-image.</p>
+<p><strong>Multi-Modal Trajectory Prediction of Surrounding Vehicles with Maneuver based LSTMs</strong> (<em>MicrosoftResearch</em>) [2018 cit 13] <a href="https://arxiv.org/pdf/1805.05499.pdf">link</a><br>
+<em>Main topic</em> Maneuvers and trajectory prediction on straight highways.</p>
+<h2 id="environmental-model">Environmental model</h2>
+<p><strong>MonoGRNet: A Geometric Reasoning Network for Monocular 3D Object Localization</strong> [2018 cit 1] <a href="https://arxiv.org/pdf/1811.10247.pdf">link</a><br>
+<a href="https://github.com/Zengyi-Qin/MonoGRNet">code</a></p>
+<p><strong>Spatial As Deep: Spatial CNN for Traffic Scene Understanding</strong> (<em>SenseTime</em>) [2018 cit 22] <a href="https://arxiv.org/pdf/1712.06080.pdf">link</a><br>
+Spatial CNN layers on top of VGG16 for lane detection<br>
+CULane Dataset release</p>
 <h1 id="pruning">Pruning</h1>
+<h1 id="convolution-layers">Convolution Layers</h1>
+<p><strong>Summary of several types of convolution commonly used in Deep Learning.</strong> <a href="https://towardsdatascience.com/a-comprehensive-introduction-to-different-types-of-convolutions-in-deep-learning-669281e58215">link</a></p>
+<ol>
+<li>Convolution v.s. Cross-correlation</li>
+<li>Convolution in Deep Learning (single channel version, multi-channel version)</li>
+<li>3D Convolution</li>
+<li>1 x 1 Convolution</li>
+<li>Convolution Arithmetic</li>
+<li>Transposed Convolution (Deconvolution, checkerboard artifacts)</li>
+<li>Dilated Convolution (Atrous Convolution)</li>
+<li>Separable Convolution (Spatially Separable Convolution, Depthwise Convolution)</li>
+<li>Flattened Convolution</li>
+<li>Grouped Convolution</li>
+<li>Shuffled Grouped Convolution</li>
+<li>Pointwise Grouped Convolution</li>
+</ol>
 <h1 id="activation-units">Activation Units</h1>
 <p><img src="https://www.dropbox.com/s/qzuznr1ukcw8y0s/activations.jpg?raw=1" alt="activation functions"></p>
 <h1 id="face-recognition">Face Recognition</h1>
