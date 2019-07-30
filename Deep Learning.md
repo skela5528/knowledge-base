@@ -103,14 +103,14 @@ Real world Uber data, 240 hours manually driving, not published.</p>
 Spatial CNN layers on top of VGG16 for lane detection<br>
 CULane Dataset release</p>
 <h1 id="pruning">Pruning</h1>
-<p><strong>SlimYOLOv3: Narrower, Faster and Better for Real-Time UAV Applications</strong>  [2019 cit 1] [link]<a href="https://arxiv.org/abs/1907.11093v1">https://arxiv.org/abs/1907.11093v1</a><br>
+<p><strong>SlimYOLOv3: Narrower, Faster and Better for Real-Time UAV Applications</strong>  [2019 cit 1] <a href="https://arxiv.org/abs/1907.11093v1">link</a><br>
 Keywords: SlimYOLOv3, object detection, drone, channel pruning, sparsity training</p>
 <p>Channel pruning strategy applicable on any conv net.<br>
 <img src="https://www.dropbox.com/s/0pkz5u0rpdwqgfd/slim_yolo3.jpg?raw=1" alt="Channel prunng"><br>
 <em>YOLOv3 vs YOLOv3-SPP3</em></p>
 <ul>
 <li>
-<p>add spatial pyramid pooling (SPP). SPP consists of 4 parallel maxpool  layers: 1x1, 5x5, 9x9, 13x13, extract multiscale deeo features and fuse them by concat.</p>
+<p>add spatial pyramid pooling (SPP). SPP consists of 4 parallel maxpool  layers: 1x1, 5x5, 9x9, 13x13, extract multiscale deep features and fuse them by concat.</p>
 </li>
 <li>
 <p>sparsity training. Learn importance score (scaling factors) for each channel during training.</p>
