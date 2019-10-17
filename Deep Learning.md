@@ -209,18 +209,18 @@ Choose triplets that are “hard”! : d(a, p) close to d(a, n)</p>
 <h2 id="net-speedresources-consumption">Net speed/resources consumption</h2>
 <h2 id="arch">Arch</h2>
 <p><strong>Scale-Aware Trident Networks for Object Detection</strong> [2019 cit 30] <a href="https://arxiv.org/pdf/1901.01892v2.pdf">link</a><br>
-<strong>Intro</strong><br>
+<strong>Motivation</strong><br>
 To remedy the large scale:<br>
 (1) <em>Image Pyramid</em><br>
 Multiple images of several scales as input. Feature extraction and detection independently for each scale.<br>
 MSSD<br>
 For face detection - detectors of different scales<br>
-Multi scale training and testing??</p>
-<p>Simple | price: inference time</p>
+Multi scale training and testing??<br>
+<em>Simple | price: inference time</em></p>
 <p>(2) <em>Feature Pyramid</em><br>
 utilize the features from different layers of CNNs for different scales<br>
 I will put yolo2 here, utilize image once, and have detectors for different sizes (5 anchors).<br>
-Comp is fast, price - feature for different scales extracted from different layers, lack of features consistency -&gt; less effective training -&gt; more chances to offer-fit for each scale. Imbalance.</p>
+<em>Comp is fast, price - feature for different scales extracted from different layers, lack of features consistency -&gt; less effective training -&gt; more chances to offer-fit for each scale. Imbalance.</em></p>
 <p>(3)<em>Trident network</em><br>
 Get the best of two worlds.<br>
 Generates scale-aware feature maps  by trident blocks with different receptive fields.</p>
@@ -228,14 +228,18 @@ Generates scale-aware feature maps  by trident blocks with different receptive f
 …as the receptive field increases, the performance of the detector on small objects drops… While for large objects, the detector benefits from the increasing receptive fields. [unbelievable]</p>
 <p><strong>Trident Network</strong><br>
 …takes a singlescale image as input, and then creates scale-specific feature maps through parallel branches where convolutions share the same parameters but with different dilation rates.</p>
-<p><em>Trident multi-branch blocks</em><br>
-- 3 branches with different dilation<br>
-- weight sharing</p>
-<p><em>Weight sharing effects</em><br>
-- less params<br>
-- “objects of different scales should go through a uniform transformation with the same representational power” ???<br>
-- params trained on more data [3 scales and not each scale for each branch]<br>
-<em>Scale - aware training</em></p>
+<p><em>Trident multi-branch blocks</em></p>
+<ul>
+<li>3 branches with different dilation</li>
+<li>weight sharing</li>
+</ul>
+<p><em>Weight sharing effects</em></p>
+<ul>
+<li>less params</li>
+<li>“objects of different scales should go through a uniform transformation with the same representational power” ???</li>
+<li>params trained on more data [3 scales and not each scale for each branch]</li>
+</ul>
+<p><em>Scale - aware training</em></p>
 <ul>
 <li>each branch trained on objects of specific scales (avoid training objects of extreme scales on mismatched branches)</li>
 </ul>
