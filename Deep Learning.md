@@ -38,6 +38,7 @@
 <ul>
 <li><a href="#weights-initialization">Weights initialization</a></li>
 <li><a href="#net-speedresources-consumption">Net speed/resources consumption</a></li>
+<li><a href="#arch">Arch</a></li>
 </ul>
 </li>
 </ul>
@@ -138,6 +139,17 @@ Keywords: SlimYOLOv3, object detection, drone, channel pruning, sparsity trainin
 <li>Shuffled Grouped Convolution</li>
 <li>Pointwise Grouped Convolution</li>
 </ol>
+<p><strong>Transposed vs dilated</strong><br>
+Both insert spaces between elements - confusing.</p>
+<p><em>Transposed</em> (deconv/ fractionally-strided conv)<br>
+<code>torch.nn.``ConvTranspose2d</code><br>
+“smart” up-sampling, very useful for segmentation - during decoder stage. High-resolution.<br>
+<em>output dims &gt; input dims</em><br>
+Insert 0 between kps in <strong>feature map</strong> ,  padding.</p>
+<p><em>Dilated</em><br>
+<code>torch.nn.Conv2d</code>(<em>in_channels</em>, <em>out_channels</em>, <em>kernel_size</em>, <em>stride=1</em>, <strong><em>dilation=2</em></strong>)<br>
+Insert spaces between the <strong>kernel elements</strong> (dilation=1 insert 0 elements)<br>
+increase receptive fields. Make use in segmentation during encoder stage.</p>
 <h1 id="activation-units">Activation Units</h1>
 <p><img src="https://www.dropbox.com/s/qzuznr1ukcw8y0s/activations.jpg?raw=1" alt="activation functions"></p>
 <h1 id="face-recognition">Face Recognition</h1>
@@ -195,6 +207,43 @@ Choose triplets that are “hard”! : d(a, p) close to d(a, n)</p>
 <h1 id="cnn-misc">CNN Misc</h1>
 <h2 id="weights-initialization">Weights initialization</h2>
 <h2 id="net-speedresources-consumption">Net speed/resources consumption</h2>
+<h2 id="arch">Arch</h2>
+<p><strong>Scale-Aware Trident Networks for Object Detection</strong> [2019 cit 30] <a href="https://arxiv.org/pdf/1901.01892v2.pdf">link</a><br>
+<strong>Intro</strong><br>
+To remedy the large scale:<br>
+(1) <em>Image Pyramid</em><br>
+Multiple images of several scales as input. Feature extraction and detection independently for each scale.<br>
+MSSD<br>
+For face detection - detectors of different scales<br>
+Multi scale training and testing??</p>
+<p>Simple | price: inference time</p>
+<p>(2) <em>Feature Pyramid</em><br>
+utilize the features from different layers of CNNs for different scales<br>
+I will put yolo2 here, utilize image once, and have detectors for different sizes (5 anchors).<br>
+Comp is fast, price - feature for different scales extracted from different layers, lack of features consistency -&gt; less effective training -&gt; more chances to offer-fit for each scale. Imbalance.</p>
+<p>(3)<em>Trident network</em><br>
+Get the best of two worlds.<br>
+Generates scale-aware feature maps  by trident blocks with different receptive fields.</p>
+<p><strong>Investigation of Receptive Field</strong><br>
+…as the receptive field increases, the performance of the detector on small objects drops… While for large objects, the detector benefits from the increasing receptive fields. [unbelievable]</p>
+<p><strong>Trident Network</strong><br>
+…takes a singlescale image as input, and then creates scale-specific feature maps through parallel branches where convolutions share the same parameters but with different dilation rates.</p>
+<p><em>Trident multi-branch blocks</em><br>
+- 3 branches with different dilation<br>
+- weight sharing</p>
+<p><em>Weight sharing effects</em><br>
+- less params<br>
+- “objects of different scales should go through a uniform transformation with the same representational power” ???<br>
+- params trained on more data [3 scales and not each scale for each branch]<br>
+<em>Scale - aware training</em></p>
+<ul>
+<li>each branch trained on objects of specific scales (avoid training objects of extreme scales on mismatched branches)</li>
+</ul>
+<p><em>Inference</em></p>
+<ul>
+<li>generate prediction for each branch [for each scale]</li>
+<li>NMS</li>
+</ul>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
