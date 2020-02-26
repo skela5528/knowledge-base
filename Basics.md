@@ -9,7 +9,9 @@
 </head>
 
 <body class="stackedit">
-  <div class="stackedit__html"><p><div class="toc">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
 <ul>
 <li>
 <ul>
@@ -18,7 +20,12 @@
 </ul>
 </li>
 </ul>
-</div></p>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <p>[TOC]</p>
 <h2 id="transfer-learning">Transfer Learning</h2>
 <p><a href="https://pytorch.org/tutorials/advanced/neural_style_tutorial.html">Pytorch tutorial</a><br>
 content image<br>
@@ -47,12 +54,31 @@ Net trained only on black cats will have trouble to work on colored cats.</li>
 <li>reduce averfitting - kind of regularization</li>
 </ul>
 <p><strong>How</strong>:<br>
-<img src="https://miro.medium.com/max/405/1*Hiq-rLFGDpESpr8QNsJ1jg.png" alt="BN transform"></p>
+<img src="https://miro.medium.com/max/405/1*Hiq-rLFGDpESpr8QNsJ1jg.png" alt="BN transform"><br>
+<a href="https://www.youtube.com/watch?v=tNIpEZLv_eg&amp;list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc&amp;index=27">A. Ng - Normalizing Activations in a Network (C2W3L04) </a><br>
+<em>Before or after activation</em> - usually BN applies before</p>
+<p>Why we need extra params <em>beta</em> and <em>gama</em> ?<br>
+<a href="https://youtu.be/tNIpEZLv_eg?list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc&amp;t=406">https://youtu.be/tNIpEZLv_eg?list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc&amp;t=406</a><br>
+We control the mean and variance of the layer to something that is best for the net!</p>
+<p><em>Regularization effect</em></p>
+<ul>
+<li>using mean and variance of the batch (sample)</li>
+<li>estimation of mean an variance are noisy</li>
+<li>make effect of regularization</li>
+<li>using bigger batch size reduce the effect!!</li>
+</ul>
+<p><em>BN during test</em></p>
+<ul>
+<li>in test time we don’t have batches, or have batches of other size and don’t want to have different results depending on batch size!!</li>
+<li>during training estimate mean and variance based on all batches. usually with moving average (more attention to last batches)</li>
+<li></li>
+</ul>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
-</div>
+
+    </div>
+  </div>
 </body>
 
 </html>
-
