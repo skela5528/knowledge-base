@@ -289,6 +289,22 @@ Generates scale-aware feature maps by trident blocks with different receptive fi
 <li>It is possible to learn multiple T, one for each type of objects.</li>
 <li>During inference: before prediction layer, apply T on feature map!</li>
 </ul>
+<p><strong>EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks</strong> [2019 cit 300] <a href="https://arxiv.org/pdf/1905.11946.pdf">link</a></p>
+<p><strong>Network scaling</strong></p>
+<ul>
+<li>width scaling - more kernels (aka channels, filters)</li>
+<li>depth scaling - more layers (ResNet-202 ;))</li>
+<li>resolution scaling - higher resolution of input image</li>
+</ul>
+<blockquote>
+<p>The main difficulty of problem 2 is that the optimald,w,rdepend on each other and the values change under differentresource constraints. Due to this difficulty, conventionalmethods mostly scale ConvNets in one of these dimensions</p>
+</blockquote>
+<p><em>But what if one can compound all 3 scaling methods? -&gt; EfficientNet</em></p>
+<p><code>w,d,r</code> are coefficients for scaling network width,depth, and resolution<br>
+Paper find those w, d, r coefficients.</p>
+<blockquote>
+<p>Observation 1 –Scaling up any dimension of network width, depth, or resolution improves accuracy, but the accuracy gain diminishes for bigger models.</p>
+</blockquote>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
