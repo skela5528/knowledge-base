@@ -12,6 +12,7 @@
   <div class="stackedit__html"><p><div class="toc">
 <ul>
 <li><a href="#overview-papers">Overview Papers</a></li>
+<li><a href="#object-detection">Object Detection</a></li>
 <li><a href="#cnn-visualization">CNN Visualization</a></li>
 <li><a href="#segmentation">Segmentation</a></li>
 <li><a href="#unsupervised">Unsupervised</a></li>
@@ -49,6 +50,36 @@
 <li>A Non-Technical Survey on Deep Convolutional Neural Network Architectures [2018-cit 5] <a href="%5Bhttps://arxiv.org/pdf/1803.02129.pdf%5D(https://arxiv.org/pdf/1803.02129.pdf)">link</a></li>
 <li>Recent Advances in Object Detection in the Age of Deep Convolutional Neural Networks [2018-cit 0] <a href="https://arxiv.org/abs/1809.03193">link</a></li>
 <li>Deep Convolutional Neural Networks for Image Classification: A Comprehensive Review [2017 cit 145] <a href="https://www.mitpressjournals.org/doi/pdf/10.1162/neco_a_00990">link</a></li>
+</ul>
+<h1 id="object-detection">Object Detection</h1>
+<p><strong>RepPoints: Point Set Representation for Object Detection</strong>-microsoft [2019 cit 5] <a href="https://arxiv.org/pdf/1904.11490.pdf">paper</a><br>
+<img src="https://github.com/microsoft/RepPoints/blob/master/demo/reppoints.png?raw=true" alt="RepPoints">RepPoints is a new representation for object detection that consists of a set of points which indicate the spatial extent of an object and semantically significant local areas.</p>
+<p><em>RepPoints more informative than boxes</em></p>
+<ul>
+<li>more precise localization</li>
+<li>shape / pose estimation</li>
+<li>as a result better feature learned during training</li>
+<li>anchor free</li>
+</ul>
+<p><em>RepPoints representation</em></p>
+<ul>
+<li>R={(Xk, Yk)} - set of n points per object (n=9 in paper)</li>
+</ul>
+<p>*Learning *</p>
+<ol>
+<li>Localization Loss:</li>
+</ol>
+<ul>
+<li>RepPoints converted to pseudoBox (for example: min and max of each dimension)</li>
+<li>Computer diff between pseudoBox and GTbox</li>
+<li>2 stages a) offsets from central point - KP center b) offsets from points found in a)</li>
+</ul>
+<ol start="2">
+<li>object recognition loss: objectness + class score vecror with <em>focal loss</em></li>
+</ol>
+<p><em>FPN backbone</em></p>
+<ul>
+<li>multiple scale features help to overcome the absence of anchors (when two different objects locating at the same position in a feature map).</li>
 </ul>
 <h1 id="cnn-visualization">CNN Visualization</h1>
 <p><strong>Hierarchical interpretations for neural network predictions</strong> [2018 cit 3] <a href="https://arxiv.org/pdf/1806.05337">link</a><br>
@@ -223,7 +254,7 @@ I will put yolo2 here, utilize image once, and have detectors for different size
 <em>Comp is fast, price - feature for different scales extracted from different layers, lack of features consistency -&gt; less effective training -&gt; more chances to offer-fit for each scale. Imbalance.</em></p>
 <p>(3)<em>Trident network</em><br>
 Get the best of two worlds.<br>
-Generates scale-aware feature maps  by trident blocks with different receptive fields.</p>
+Generates scale-aware feature maps by trident blocks with different receptive fields.</p>
 <p><strong>Investigation of Receptive Field</strong><br>
 …as the receptive field increases, the performance of the detector on small objects drops… While for large objects, the detector benefits from the increasing receptive fields. [unbelievable]</p>
 <p><strong>Trident Network</strong><br>
@@ -247,6 +278,16 @@ Generates scale-aware feature maps  by trident blocks with different receptive f
 <ul>
 <li>generate prediction for each branch [for each scale]</li>
 <li>NMS</li>
+</ul>
+<p><strong>Spatial Transformer Networks</strong>(Max Jaderberg Karen Simonyan Andrew Zisserman Koray Kavukcuoglu, GOOGLE) [2015 cit 2508] <a href="http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf">link</a><br>
+<a href="https://pytorch.org/tutorials/intermediate/spatial_transformer_tutorial.html">Pytorch tutorial</a></p>
+<p>Make long story short:</p>
+<ul>
+<li>learn transformation matrix T (e.g affine transform with 6 params)</li>
+<li>this T is applied on the feature map (for example last layer with spatial dimension)</li>
+<li>T learned in such way that is minimized the Loss</li>
+<li>It is possible to learn multiple T, one for each type of objects.</li>
+<li>During inference: before prediction layer, apply T on feature map!</li>
 </ul>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
