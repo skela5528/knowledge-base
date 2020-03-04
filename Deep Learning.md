@@ -181,6 +181,18 @@ Insert 0 between kps in <strong>feature map</strong> ,  padding.</p>
 <code>torch.nn.Conv2d</code>(<em>in_channels</em>, <em>out_channels</em>, <em>kernel_size</em>, <em>stride=1</em>, <strong><em>dilation=2</em></strong>)<br>
 Insert spaces between the <strong>kernel elements</strong> (dilation=1 insert 0 elements)<br>
 increase receptive fields. Make use in segmentation during encoder stage.</p>
+<p><em>Separable Conv (Spatially-, Depthwise)</em></p>
+<ul>
+<li>
+<p><em>Spatially separable conv</em> - 3x3 kernel -&gt; divided into 3x1 and 1x3 kernels (6 instead of 9 operations)</p>
+</li>
+<li>
+<p><em>Depthwise Separable conv</em> - 1st step spatial info: 3x3x3 kernel -&gt; divided into 3 3x3x1 kernels! Each new kernel  convolves with different input channel.<br>
+2nd step increase depth: 5x5x3 extend the depth with n 1x1 convs.<br>
+Advantage - Efficiency! Less operations than regular 2d conv.</p>
+</li>
+</ul>
+<p><em>Grouped Conv</em> - garmoshka</p>
 <h1 id="activation-units">Activation Units</h1>
 <p><img src="https://www.dropbox.com/s/qzuznr1ukcw8y0s/activations.jpg?raw=1" alt="activation functions"></p>
 <h1 id="face-recognition">Face Recognition</h1>
@@ -305,6 +317,7 @@ Paper find those w, d, r coefficients.</p>
 <blockquote>
 <p>Observation 1 –Scaling up any dimension of network width, depth, or resolution improves accuracy, but the accuracy gain diminishes for bigger models.</p>
 </blockquote>
+<p><strong>MobileNetV2: Inverted Residuals and Linear Bottlenecks</strong> [2018 cit 1300] <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sandler_MobileNetV2_Inverted_Residuals_CVPR_2018_paper.pdf">link</a></p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
