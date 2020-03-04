@@ -17,6 +17,7 @@
 <ul>
 <li><a href="#transfer-learning">Transfer Learning</a></li>
 <li><a href="#batch-normalization">Batch Normalization</a></li>
+<li><a href="#vanishingexploding-gradients">Vanishing/Exploding Gradients</a></li>
 </ul>
 </li>
 </ul>
@@ -72,6 +73,17 @@ We control the mean and variance of the layer to something that is best for the 
 <li>in test time we don’t have batches, or have batches of other size and don’t want to have different results depending on batch size!!</li>
 <li>during training estimate mean and variance based on all batches. usually with moving average (more attention to last batches)</li>
 <li></li>
+</ul>
+<h2 id="vanishingexploding-gradients">Vanishing/Exploding Gradients</h2>
+<p><a href="https://www.youtube.com/watch?v=qhXZsFVxGKo">andrew ng video</a></p>
+<p>Derivatives can be very-very small (vanishing) or big(exploding)</p>
+<p>Now when we do Back-propagation i.e moving backward in the Network and calculating gradients of loss(Error) with respect to the weights , the gradients tends to get smaller  and smaller as we keep on moving backward in the Network.  All this to many multiplications.<br>
+This means that the neurons in the Earlier  layers learn very slowly as compared to the neurons in the later layers in the Hierarchy. The Earlier layers in the network are slowest to train.</p>
+<p>Solutions</p>
+<ul>
+<li>residual net</li>
+<li>ReLU</li>
+<li>optimization not bases on gradients, e.g. genetic algorithms</li>
 </ul>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
