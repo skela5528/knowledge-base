@@ -9,9 +9,7 @@
 </head>
 
 <body class="stackedit">
-  <div class="stackedit__left">
-    <div class="stackedit__toc">
-      
+  <div class="stackedit__html"><p><div class="toc">
 <ul>
 <li>
 <ul>
@@ -21,12 +19,7 @@
 </ul>
 </li>
 </ul>
-
-    </div>
-  </div>
-  <div class="stackedit__right">
-    <div class="stackedit__html">
-      <p>[TOC]</p>
+</div></p>
 <h2 id="transfer-learning">Transfer Learning</h2>
 <p><a href="https://pytorch.org/tutorials/advanced/neural_style_tutorial.html">Pytorch tutorial</a><br>
 content image<br>
@@ -88,9 +81,8 @@ This means that the neurons in the Earlier  layers learn very slowly as compared
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
-
-    </div>
-  </div>
+</div>
 </body>
 
 </html>
+
