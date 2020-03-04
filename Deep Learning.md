@@ -317,7 +317,23 @@ Paper find those w, d, r coefficients.</p>
 <blockquote>
 <p>Observation 1 –Scaling up any dimension of network width, depth, or resolution improves accuracy, but the accuracy gain diminishes for bigger models.</p>
 </blockquote>
-<p><strong>MobileNetV2: Inverted Residuals and Linear Bottlenecks</strong> [2018 cit 1300] <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sandler_MobileNetV2_Inverted_Residuals_CVPR_2018_paper.pdf">link</a></p>
+<p><strong>MobileNetV2: Inverted Residuals and Linear Bottlenecks</strong> [2018 cit 1300] <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Sandler_MobileNetV2_Inverted_Residuals_CVPR_2018_paper.pdf">link</a><br>
+<a href="https://towardsdatascience.com/mobilenetv2-inverted-residuals-and-linear-bottlenecks-8a4362f4ffd5">link to blog</a></p>
+<p>novel layer module: the inverted residual with linear bottleneck.</p>
+<ul>
+<li>
+<p><em>Depthwise Separable Convolutions</em> is use ~k**2 (k-kernel size) less computations than regular 2D conv.</p>
+</li>
+<li>
+<p><em>Linear Bottlenecks</em>  Inverted residual blocks squeeze the layers where the skip connections are linked. This hurts the performance of the network. The authors introduced the idea of a linear bottleneck where the last convolution of a residual block has a linear output.</p>
+</li>
+<li>
+<p><em>Inverted residuals</em><br>
+In opposite to original res-block (resnet) connect bottleneck layers with skip connection.<br>
+Resnet: wide-&gt;narrow-&gt;wide<br>
+MobiliNet_v2: narrow-&gt;wide-&gt;narrow</p>
+</li>
+</ul>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
