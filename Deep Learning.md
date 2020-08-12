@@ -16,7 +16,7 @@
 <li><a href="#cnn-visualization">CNN Visualization</a></li>
 <li><a href="#segmentation">Segmentation</a></li>
 <li><a href="#unsupervised">Unsupervised</a></li>
-<li><a href="#anomaly-and-action-detection-in-video">Anomaly and Action Detection in Video</a></li>
+<li><a href="#tracking">Tracking</a></li>
 <li><a href="#self-driving-cars">Self Driving Cars</a>
 <ul>
 <li><a href="#trajectory-prediction">Trajectory prediction</a></li>
@@ -99,7 +99,40 @@ Is it possible to train high quality instance segmentation models without comple
 <p>…Partially supervised instance segmentation task - transfer learning method to address it.</p>
 <p><em>Tasks</em>: (1) given a set of categories of interest, a small subset has instance mask annotations, while the other categories have only bounding box annotations; (2) the instance segmentation algorithm should utilize this data to fit a model that can segment instances of all object categories in the set of interest.</p>
 <p><em>How?</em> - #TODO</p>
-<h1 id="anomaly-and-action-detection-in-video">Anomaly and Action Detection in Video</h1>
+<h1 id="tracking">Tracking</h1>
+<p><strong>A Simple Baseline for Multi-Object Tracking</strong> (Microsoft Research) [2020] <a href="https://arxiv.org/pdf/2004.01888.pdf">link</a><br>
+<a href="https://github.com/ifzhang/FairMOT">github</a><br>
+Current MOT  methods have 2 separate models:</p>
+<ul>
+<li>detector: produce bboxes</li>
+<li>association net: extract Re-identification features for each bbox, links to existing ids, based on some similarity metric</li>
+<li>not good: networks don;t share features, extra time for inference</li>
+<li>alternative: <em>one-shot methods</em> - accuracy of the current one-shot methods drops remarkably compared to the two-step ones</li>
+</ul>
+<p><em>Factors which are critical to the accuracy</em>:</p>
+<ul>
+<li>Anchors don’t fit Re-ID:  anchor-based methods usually operate on a coarse grid. So there is a high chance that the features extracted at the anchor are not aligned with the object center. Due to downsampling features are too coarse for RE-ID.</li>
+<li>Multi-Layer Feature Aggregation: low-level and high-level features to deal with both small and large objects. Important for one-shot</li>
+<li>Dimensionality of the ReID Features should be lower. Lower-dimensional features are actually better for MOT because it has fewer training images than ReID. Learning low-dimensional features helps reduce the risk of over-fitting to small data, and improves the tracking robustness.</li>
+</ul>
+<p><em>Aproach</em></p>
+<ul>
+<li>
+<p>Encoder-Decoder. Resnet-34 + <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Yu_Deep_Layer_Aggregation_CVPR_2018_paper.pdf">Deep Layer Aggreagation</a>.</p>
+</li>
+<li>
+<p>Detection Branch:</p>
+</li>
+</ul>
+<ol>
+<li>heatmap head - estimating the locations of the object centers</li>
+<li>center offset head - is responsible for localizing the objects more precisely (feature map stride is &gt; 1). Careful alignment of the ReID features with object centers is critical for the performance.</li>
+<li>box size head: w, h</li>
+</ol>
+<ul>
+<li>Re-Id Branch - identity embedding branch is generate features that can distinguish different objects. A convolution layer with 128 kernels on top of the backbone features which extract identity embedding features for each location.<br>
+jjj</li>
+</ul>
 <h1 id="self-driving-cars">Self Driving Cars</h1>
 <h2 id="trajectory-prediction">Trajectory prediction</h2>
 <p><strong>Social LSTM: human trajectory prediction in crowded spaces</strong> [2016 cit 357] <a href="http://cvgl.stanford.edu/papers/CVPR16_Social_LSTM.pdf">link</a><br>
@@ -334,6 +367,8 @@ Resnet: wide-&gt;narrow-&gt;wide<br>
 MobiliNet_v2: narrow-&gt;wide-&gt;narrow</p>
 </li>
 </ul>
+<p><strong>An Analysis of Scale Invariance in Object Detection – SNIP</strong> [2018 cit 200] <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Singh_An_Analysis_of_CVPR_2018_paper.pdf">link</a><br>
+<em>Intro</em></p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
