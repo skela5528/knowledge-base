@@ -18,6 +18,7 @@
 <li><a href="#vanishingexploding-gradients">Vanishing/Exploding Gradients</a></li>
 <li><a href="#optimizers">Optimizers</a></li>
 <li><a href="#focal-loss">Focal Loss</a></li>
+<li><a href="#recipe-for-training-neural-networks-a.-karpathny">Recipe for Training Neural Networks (A. Karpathny)</a></li>
 </ul>
 </li>
 </ul>
@@ -123,6 +124,39 @@ Weighted CE is not enough. While α balances the importance of positive/negative
 <li>weighted CE</li>
 </ul>
 <p><em>gamma</em>- focusing parameter, authors suggest 2.</p>
+<h2 id="recipe-for-training-neural-networks-a.-karpathny">Recipe for Training Neural Networks (A. Karpathny)</h2>
+<p><a href="http://karpathy.github.io/2019/04/25/recipe/">link to blog post</a><br>
+<strong>Neural net training fails silently</strong> - everything could be correct syntactically and run without errors, but something wrong/buggy inside.</p>
+<p><strong>2 main principles</strong> (actually relevant to any system or even any project):</p>
+<ul>
+<li>start from simple to complex</li>
+<li>at every step make hypothesis about results and validate/investigate them</li>
+</ul>
+<p>Recipe</p>
+<ol>
+<li>
+<p>Inspect your data</p>
+</li>
+<li>
+<p>Training/ evaluation environment. Validate that works fine on a simple model.</p>
+<ul>
+<li>fix random seed</li>
+<li>simplify (no augmentations/ dropouts etc.)</li>
+<li>verify loss at init, for example with 2 classes and CE = - log (1/2)</li>
+<li>init well<br>
+E.g. if you are regressing some values that have a mean of 50 then initialize the final bias to 50. If you have an imbalanced dataset of a ratio 1:10 of positives:negatives, set the bias on your logits such that your network predicts probability of 0.1 at initialization. Setting these correctly will speed up convergence</li>
+<li>Monitor metrics other than loss that are human interpretable and checkable</li>
+<li>input-indepent baseline<br>
+Input zeros shoud be worse than actual data. E.g. does your model learn to extract any information out of the input at all?</li>
+<li>overfit one batch -&gt; loss 0</li>
+<li>verify decreasing training loss</li>
+<li><strong>visualize just before the net</strong> the  correct place to visualize your <strong>data</strong> is immediately before your <code>y_hat = model(x)</code></li>
+<li>visualize prediction dynamics on fixed test batch</li>
+<li>generalize a special case<br>
+people create bugs when they bite off more than they can chew, writing a relatively general functionality from scratch. I like to write a very specific function to what I’m doing right now, get that to work, and then generalize it later making sure that I get the same result. Often this applies to vectorizing code, where I almost always write out the fully loopy version first and only then transform it to vectorized code one loop at a time.</li>
+</ul>
+</li>
+</ol>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
