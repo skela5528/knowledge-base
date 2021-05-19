@@ -19,6 +19,11 @@
 <li><a href="#optimizers">Optimizers</a></li>
 <li><a href="#focal-loss">Focal Loss</a></li>
 <li><a href="#recipe-for-training-neural-networks-a.-karpathny">Recipe for Training Neural Networks (A. Karpathny)</a></li>
+<li><a href="#evaluation">Evaluation</a>
+<ul>
+<li><a href="#roc-vs-pr-curves">ROC vs PR curves</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -160,6 +165,17 @@ people create bugs when they bite off more than they can chew, writing a relativ
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
+<h2 id="evaluation">Evaluation</h2>
+<h3 id="roc-vs-pr-curves">ROC vs PR curves</h3>
+<p>ROC curve - Receiver operating characteristic<br>
+TP rate (Recall) vs FP rate: how many TP you are pay per FP.</p>
+<p>PR (precision - recall) curve.</p>
+<ul>
+<li>ROC curves are appropriate when the observations are balanced between each class, whereas precision-recall curves are appropriate for imbalanced datasets.</li>
+<li>example where PR is more informative: <a href="https://stats.stackexchange.com/questions/7207/roc-vs-precision-and-recall-curves">link</a></li>
+<li>a) Result (I) describes a result where 10 of the 20 hits are in the top ten ranks and the remaining 10 hits are then evenly spread out over the first 1500 ranks.</li>
+<li>Result (II) describes a result where the 20 hits are evenly spread over the first 500 (out of 2000) ranks.</li>
+</ul>
 </div>
 </body>
 
