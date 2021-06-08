@@ -24,6 +24,7 @@
 <li><a href="#roc-vs-pr-curves">ROC vs PR curves</a></li>
 </ul>
 </li>
+<li><a href="#gnn---graph-neural-network">GNN - Graph Neural Network</a></li>
 </ul>
 </li>
 </ul>
@@ -176,6 +177,11 @@ TP rate (Recall) vs FP rate: how many TP you are pay per FP.</p>
 <li>a) Result (I) describes a result where 10 of the 20 hits are in the top ten ranks and the remaining 10 hits are then evenly spread out over the first 1500 ranks.</li>
 <li>Result (II) describes a result where the 20 hits are evenly spread over the first 500 (out of 2000) ranks.</li>
 </ul>
+<h2 id="gnn---graph-neural-network">GNN - Graph Neural Network</h2>
+<p><a href="https://towardsdatascience.com/a-gentle-introduction-to-graph-neural-network-basics-deepwalk-and-graphsage-db5d540d50b3">link</a><br>
+A <strong>graph</strong> <em>G</em> can be well described by the set of vertices <em>V</em> and edges <em>E</em> it contains.</p>
+<p><strong>GNN</strong><br>
+Graph Neural Network is a type of Neural Network which directly operates on the Graph structure. A typical application of GNN is node classification. Essentially, every node in the graph is associated with a label, and we want to predict the label of the nodes without ground-truth.</p>
 </div>
 </body>
 
