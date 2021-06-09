@@ -55,6 +55,20 @@ USE CASES:</p>
 <li>Easy rollback (Blue/green) - switch to old version in click if something wrong. Keep 2 systems (old and new) in parallel.</li>
 </ol>
 <p><img src="https://www.dropbox.com/s/dsruled6x4hxcy8/c1w1_2.png?raw=1" alt="levels of automation"></p>
+<p><strong>Monitoring</strong><br>
+<strong>Monitoring dashboard</strong> (server load, fraction of nan/missing inputs, fraction of not null outputs)</p>
+<ul>
+<li>Brainstorming of metric that will detect problems</li>
+<li>Many metrics in beginning and keep only useful/</li>
+<li><em>Software metrics</em> (memory, load, latency etc)</li>
+<li><em>Input metrics</em> - data distribution, % missing values</li>
+<li><em>Output metrics</em> - times return Null, CTR</li>
+<li>Set thresholds for alarms, adapt over time</li>
+</ul>
+<p>Deployment is iterative.</p>
+<p><strong>Pipeline monitoring</strong><br>
+System build from multiple modules.<br>
+Monitoring each module individually.</p>
 <h2 id="week-2">Week 2</h2>
 <h2 id="week-3">Week 3</h2>
 <blockquote>
