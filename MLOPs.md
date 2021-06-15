@@ -14,7 +14,7 @@
 <li><a href="#course-1---introduction-to-machine-learning-in-production">Course 1 - Introduction to Machine Learning in Production</a>
 <ul>
 <li><a href="#week-1">Week 1</a></li>
-<li><a href="#week-2">Week 2</a></li>
+<li><a href="#week-2---modeling">Week 2 - Modeling</a></li>
 <li><a href="#week-3">Week 3</a></li>
 </ul>
 </li>
@@ -69,7 +69,34 @@ USE CASES:</p>
 <p><strong>Pipeline monitoring</strong><br>
 System build from multiple modules.<br>
 Monitoring each module individually.</p>
-<h2 id="week-2">Week 2</h2>
+<h2 id="week-2---modeling">Week 2 - Modeling</h2>
+<p>Model-centric AI vs Data-centric AI (even more important and kind of low-hanging fruit)<br>
+Data centric - improve the data<br>
+AI system = Code + Data.            (code is also algorithm/model)</p>
+<ol>
+<li>Doing well on training set (training error)</li>
+<li>Doing well on dev/test sets.</li>
+<li>Doing well on business metrics/project goals!</li>
+</ol>
+<p><strong>Why low AVERAGE error isn’t good enough?</strong><br>
+Performance on disproportionately <em>important</em> examples!</p>
+<ul>
+<li>discriminate some group of users (by language or ethnicity) / small retailers</li>
+<li>rare (unbalanced) classes</li>
+<li>The ML job is not doing well on the test set. BUT SOLVE REAL BUSINESS ISSUE!</li>
+</ul>
+<p><strong>Establish a baseline</strong> - indicate what is possible</p>
+<ul>
+<li>HLP (human level performance), but depends if structured or unstructured data (people usually good )</li>
+<li>Literature search for SOTA / open source</li>
+<li>Quick and dirty implementation</li>
+<li>Performance of older system</li>
+</ul>
+<p><strong>Tips</strong></p>
+<ul>
+<li>Find reasonable open source algo (github)</li>
+<li>sanity check: over-fit to small dataset</li>
+</ul>
 <h2 id="week-3">Week 3</h2>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
