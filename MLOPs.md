@@ -17,6 +17,7 @@
 <li><a href="#week-2---modeling">Week 2 - Modeling</a>
 <ul>
 <li><a href="#error-analysis">Error Analysis</a></li>
+<li><a href="#data-iterations">Data Iterations</a></li>
 </ul>
 </li>
 <li><a href="#week-3">Week 3</a></li>
@@ -132,7 +133,43 @@ or high precision: google on top1/3 result</li>
 ESTABLISH METRICS on APPROPRIATE SLICES OF DATA<br>
 Cars/ pedestrians/ cyclist, long/mid/short distance, angle of view.<br>
 Lane Detection: Highway vs Country road, Day vs Night</p>
+<h3 id="data-iterations">Data Iterations</h3>
+<ul>
+<li><em>model centric</em> - most academic researches. Take data and dev  a best model for this data. Hold data fix</li>
+<li><em>data-centric</em> view</li>
+</ul>
+<p><strong>Data augmentation</strong>:</p>
+<ul>
+<li>does it realistic</li>
+<li>is x-&gt;y mapping clear (e.g. humans recognize speech)</li>
+<li>is algo currently doing poorly on those examples</li>
+</ul>
+<p><strong>Can adding data hurt?</strong><br>
+For unstructured data: if model is <strong>large</strong> and the <strong>mapping is clear x-&gt;y</strong> (e.g. human recognize good), then adding data rarely hurts accuracy.<br>
+BUT it change data distribution! and can hurt in some rare cases.</p>
+<p><strong>Adding features - structure data</strong><br>
+user - restaurant recommendation<br>
+add features “is person vegetarian” “is rest has vegetarian options?”</p>
+<p><strong>Experiment tracking</strong></p>
+<ul>
+<li>Algo/code version</li>
+<li>Data</li>
+<li>Hyper-parameters</li>
+<li>Results</li>
+</ul>
+<p><em>Tracking tools</em>: Spreadsheets, Experiment tracking system: <em>MLflow</em>, <em>weights&amp;biases</em>,  <em>Amazon SageMaker Studio</em>, <em>verta ai</em></p>
 <h2 id="week-3">Week 3</h2>
+<p><strong>Define Data and Establish Baseline</strong><br>
+Data definition is hard - different ways of labeling (lanes- middle, inner ), <em>inconsistent</em><br>
+<strong>Types of data problems:</strong><br>
+Unstructured/ structured data<br>
+small/ big data (thresh: 10k )<br>
+<img src="https://www.dropbox.com/s/yasagooj9ldoe8k/c1w3_1.png?raw=1" alt="types of data/ML projects">Shifting from one quadrant to another is more difficult. (hiring new people, taking advice from another ML eng.)</p>
+<p><em>Unstructured</em>: humans can label more, data augmentation<br>
+<em>Structured</em>: how hard to collect more data? / is human labeling possible?</p>
+<p><em>Small vs big data (10k)</em><br>
+small data: clean label are critical / can manually look and fix/ small labeling team - easy to be consistent.<br>
+big data: establish data process</p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
