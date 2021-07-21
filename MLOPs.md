@@ -170,6 +170,16 @@ small/ big data (thresh: 10k )<br>
 <p><em>Small vs big data (10k)</em><br>
 small data: clean label are critical / can manually look and fix/ small labeling team - easy to be consistent.<br>
 big data: establish data process</p>
+<p><strong>Improving label consistency</strong><br>
+<img src="https://www.dropbox.com/s/s1gysnvslp673ne/c1w3_2.png?raw=1" alt="img">Sometimes merging 2 classes to 1 - make things simpler -&gt; more consistent</p>
+<p><strong>HLP - Human Level Performance</strong><br>
+Great baseline, or max level of performance (depends of context).<br>
+Detect what can be possible<br>
+How to measure HLP? -&gt; compare human to GT… but if GT is also created by human is just how 2 people agree/consistent …</p>
+<p>Bit HLP level ? sometimes good (publish a paper), sometimes misleading, mask Algo errors</p>
+<p>If <strong>GT is externally defined</strong>(e.g. come from precise measurements) HLP provide and estimation of irreducible error<br>
+if <strong>GT is comes from human label</strong> HLP &lt;&lt; 100% may indicate ambiguous labeling instructions.</p>
+<p>On <em>Structured data</em> HLP is less common (exceptions: User ID merging - same person, based on net traffic is the computer hacked, is transaction fraudulent, spam )</p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
