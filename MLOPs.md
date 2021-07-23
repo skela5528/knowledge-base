@@ -215,6 +215,12 @@ Missing data/ missing features treatment</p>
 <li>device type, labeler ID, preprocess model id, data origin</li>
 <li><strong>useful for error analysis, unexpected effects</strong></li>
 </ul>
+<p><strong>Balanced train/dev/test split</strong></p>
+<ul>
+<li>random split 60/20/20 is not always a good choice</li>
+<li>especially for small data sets</li>
+<li>balance split - to maintain the original data distribution for example of label</li>
+</ul>
 </div>
 </body>
 
