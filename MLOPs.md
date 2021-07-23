@@ -20,7 +20,11 @@
 <li><a href="#data-iterations">Data Iterations</a></li>
 </ul>
 </li>
-<li><a href="#week-3">Week 3</a></li>
+<li><a href="#week-3">Week 3</a>
+<ul>
+<li><a href="#data">Data</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -180,9 +184,10 @@ How to measure HLP? -&gt; compare human to GT… but if GT is also created by hu
 <p>If <strong>GT is externally defined</strong>(e.g. come from precise measurements) HLP provide and estimation of irreducible error<br>
 if <strong>GT is comes from human label</strong> HLP &lt;&lt; 100% may indicate ambiguous labeling instructions.</p>
 <p>On <em>Structured data</em> HLP is less common (exceptions: User ID merging - same person, based on net traffic is the computer hacked, is transaction fraudulent, spam )</p>
-<blockquote>
-<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
-</blockquote>
+<h3 id="data">Data</h3>
+<p><strong>How long should you spend obtaining data</strong><br>
+Avoid that data collection stage slow down the iterative cycle<br>
+<img src="https://www.dropbox.com/s/l1j34cawb9tmt6b/c1w3_3.png?raw=1" alt=""></p>
 </div>
 </body>
 
