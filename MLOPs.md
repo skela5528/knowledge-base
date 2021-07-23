@@ -187,7 +187,21 @@ if <strong>GT is comes from human label</strong> HLP &lt;&lt; 100% may indicate 
 <h3 id="data">Data</h3>
 <p><strong>How long should you spend obtaining data</strong><br>
 Avoid that data collection stage slow down the iterative cycle<br>
-<img src="https://www.dropbox.com/s/l1j34cawb9tmt6b/c1w3_3.png?raw=1" alt=""></p>
+<img src="https://www.dropbox.com/s/l1j34cawb9tmt6b/c1w3_3.png?raw=1" alt="img"><br>
+<strong>Inventory data:</strong> list down and compare data sources: <em>source</em>, <em>amount</em>, <em>cost</em>, <em>time</em><br>
+sometimes purchase is better than in house labeling.</p>
+<ul>
+<li><em>in-house</em> vs <em>outsourced</em> vs <em>crowdsourced</em></li>
+<li>it’s OK to label data by yourself, even help to better understand the project</li>
+<li>who is qualified?
+<ul>
+<li>any reasonable person</li>
+<li>subject matter expert</li>
+<li>some times it’s almost impossible to label well - recommendation systems (need to relay on real data)</li>
+</ul>
+</li>
+<li>don’t increase data too drastically, for sure less  than x10 at a time (x2 -x3 times)</li>
+</ul>
 </div>
 </body>
 
