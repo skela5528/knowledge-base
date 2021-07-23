@@ -202,6 +202,19 @@ sometimes purchase is better than in house labeling.</p>
 </li>
 <li>don’t increase data too drastically, for sure less  than x10 at a time (x2 -x3 times)</li>
 </ul>
+<p><strong>Data pipeline</strong><br>
+Development vs Production pipeline !!!<br>
+Replicable data pipeline<br>
+Separete POC stagean and production stage</p>
+<p><strong>Structured data pipelines usually more complex</strong>:<br>
+multiple data sources, cleaning, ip black list filtering, spam filtering, ID merge, for each task different sub-models etc. and in the end the main ML task model.<br>
+Missing data/ missing features treatment</p>
+<p><strong>Meta - data</strong> (data about data) - super important to save</p>
+<ul>
+<li>Time of pictures, factory, manufacture line #,  camera setting, phone model, inspector ID etc</li>
+<li>device type, labeler ID, preprocess model id, data origin</li>
+<li><strong>useful for error analysis, unexpected effects</strong></li>
+</ul>
 </div>
 </body>
 
