@@ -205,7 +205,7 @@ sometimes purchase is better than in house labeling.</p>
 <p><strong>Data pipeline</strong><br>
 Development vs Production pipeline !!!<br>
 Replicable data pipeline<br>
-Separete POC stagean and production stage</p>
+Separate POC stage and production stage</p>
 <p><strong>Structured data pipelines usually more complex</strong>:<br>
 multiple data sources, cleaning, ip black list filtering, spam filtering, ID merge, for each task different sub-models etc. and in the end the main ML task model.<br>
 Missing data/ missing features treatment</p>
