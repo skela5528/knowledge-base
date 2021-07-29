@@ -25,6 +25,7 @@
 <li><a href="#data">Data</a></li>
 </ul>
 </li>
+<li><a href="#scoping-optional">Scoping (optional)</a></li>
 </ul>
 </li>
 </ul>
@@ -220,6 +221,39 @@ Missing data/ missing features treatment</p>
 <li>random split 60/20/20 is not always a good choice</li>
 <li>especially for small data sets</li>
 <li>balance split - to maintain the original data distribution for example of label</li>
+</ul>
+<h2 id="scoping-optional">Scoping (optional)</h2>
+<p><strong>What is scoping:</strong></p>
+<ul>
+<li>What project should we work on?</li>
+<li>What are the metric for success?</li>
+<li>What are the resources (data, time, people) needed?</li>
+</ul>
+<p><strong>Scoping process:</strong><br>
+<img src="https://www.dropbox.com/s/pundmtf8pvpcyiq/c1scoping_1.png?raw=1" alt="process"><br>
+<strong>Separate problem identification from solution!!!</strong><br>
+What to achieve vs how to achieve<br>
+Define/ understand business problems/ challenges</p>
+<p><strong>Feasibility and value</strong></p>
+<ul>
+<li>use external benchmark (literature, other company, competitor)</li>
+<li>HLP (for unstructured data) with the same data (same kind of images, same resolution, same lighting conditions etc)</li>
+<li>History of the project (if available)</li>
+<li>Are predictable feature available?</li>
+</ul>
+<p><strong>History</strong><br>
+<img src="https://www.dropbox.com/s/tdjb2rfp33mgc89/c1scoping_2.png?raw=1" alt="history"><br>
+<strong>Project value</strong><br>
+<em>Have ML team and business teams agree on metrics!</em> Somewhere in the middle between CNN Loss and Revenue.<br>
+Fermi estimation (<em>from ML metrics -&gt; business metrics</em>)</p>
+<p><strong>Milestones and Resourcing</strong></p>
+<ul>
+<li>ML metrics (MSE, accuracy, precision/recall etc.)</li>
+<li>Software metrics (latency, throughput)</li>
+<li>Business metrics (revenue, etc., number of customers)</li>
+<li>Resources needed (data, personnel, help from other teams)</li>
+<li>Timeline<br>
+<strong>Benchmarking to other projects, building POC</strong> to be smarter, more confident</li>
 </ul>
 </div>
 </body>
