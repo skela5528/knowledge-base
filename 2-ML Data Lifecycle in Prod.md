@@ -13,7 +13,14 @@
 <ul>
 <li><a href="#course-2----machine-learning-data-lifecycle-in-production">Course 2 - # Machine Learning Data Lifecycle in Production</a>
 <ul>
-<li><a href="#week-1">Week 1</a></li>
+<li><a href="#week-1">Week 1</a>
+<ul>
+<li><a href="#itro">Itro</a></li>
+<li><a href="#collecting-data">Collecting Data</a></li>
+<li><a href="#labeling-data">Labeling Data</a></li>
+<li><a href="#validating-data">Validating Data</a></li>
+</ul>
+</li>
 <li><a href="#week-2">Week 2</a></li>
 <li><a href="#week-3">Week 3</a></li>
 <li><a href="#week-4">Week 4</a></li>
@@ -23,6 +30,18 @@
 </div></p>
 <h1 id="course-2----machine-learning-data-lifecycle-in-production">Course 2 - # Machine Learning Data Lifecycle in Production</h1>
 <h2 id="week-1">Week 1</h2>
+<h3 id="itro">Itro</h3>
+<blockquote>
+<p>Data is the hardest part of ML and the most important piece to get right…<br>
+Broken data is the most common cause of problems in production ML systems</p>
+</blockquote>
+<p><strong>Production ML = ML dev + SW dev</strong></p>
+<p><img src="https://www.dropbox.com/s/stjcvjyxdsvs67x/c2_w1_1.png?raw=1" alt=""><br>
+<strong>Difference ML modeling vs production ML:</strong><br>
+<img src="https://www.dropbox.com/s/1yprtiqbfry5rqk/c2w1_2.png?raw=1" alt=""></p>
+<h3 id="collecting-data">Collecting Data</h3>
+<h3 id="labeling-data">Labeling Data</h3>
+<h3 id="validating-data">Validating Data</h3>
 <h2 id="week-2">Week 2</h2>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
