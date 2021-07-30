@@ -38,7 +38,22 @@ Broken data is the most common cause of problems in production ML systems</p>
 <p><strong>Production ML = ML dev + SW dev</strong></p>
 <p><img src="https://www.dropbox.com/s/stjcvjyxdsvs67x/c2_w1_1.png?raw=1" alt=""><br>
 <strong>Difference ML modeling vs production ML:</strong><br>
-<img src="https://www.dropbox.com/s/1yprtiqbfry5rqk/c2w1_2.png?raw=1" alt=""></p>
+<img src="https://www.dropbox.com/s/1yprtiqbfry5rqk/c2w1_2.png?raw=1" alt=""><br>
+<strong>Modern SW:</strong></p>
+<ul>
+<li>scalability</li>
+<li>extensibility</li>
+<li>configuration</li>
+<li>consistency and reproducibility</li>
+<li>safety/ security</li>
+<li>modularity</li>
+<li>testability</li>
+<li>monitoring</li>
+</ul>
+<p><strong>TensorFlow Extended (TFX)</strong><br>
+End to end platform for deploying prod ML pipelines (open source)<br>
+D=Data<br>
+D ingestion -&gt; D validation -&gt; Feature Eng -&gt; Train Model -&gt; Validate Model -&gt; Serve Model</p>
 <h3 id="collecting-data">Collecting Data</h3>
 <h3 id="labeling-data">Labeling Data</h3>
 <h3 id="validating-data">Validating Data</h3>
