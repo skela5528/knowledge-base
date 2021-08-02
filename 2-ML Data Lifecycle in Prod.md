@@ -55,6 +55,28 @@ End to end platform for deploying prod ML pipelines (open source)<br>
 D=Data<br>
 D ingestion -&gt; D validation -&gt; Feature Eng -&gt; Train Model -&gt; Validate Model -&gt; Serve Model</p>
 <h3 id="collecting-data">Collecting Data</h3>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Understand users -&gt; translate user needs into data problems</li>
+<li>Ensure data coverage and predictive signal</li>
+<li>Store and monitor data quality</li>
+</ul>
+<p><strong>Use case</strong><br>
+<strong>identify system specs</strong>: users/ users needs/ user actions/ ML system output/ ML system learning<br>
+<strong>identify data specs</strong>: what kind of/ how much data is available/ how often does new data come in/ is it annotated/ how?<br>
+<strong>translate user needs into data needs</strong>:</p>
+<ul>
+<li>data needed</li>
+<li>features needed</li>
+<li>labels needed</li>
+</ul>
+<p><strong>Get know your data !!!</strong></p>
+<ul>
+<li>data sources</li>
+<li>if data sources are refreshed</li>
+<li>consistency for values, units &amp; data types</li>
+<li>monitor outliers and errors</li>
+</ul>
 <h3 id="labeling-data">Labeling Data</h3>
 <h3 id="validating-data">Validating Data</h3>
 <h2 id="week-2">Week 2</h2>
