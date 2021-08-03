@@ -77,7 +77,55 @@ D ingestion -&gt; D validation -&gt; Feature Eng -&gt; Train Model -&gt; Validat
 <li>consistency for values, units &amp; data types</li>
 <li>monitor outliers and errors</li>
 </ul>
+<p><strong>Dataset issues</strong>: inconsistent formatting /compounding errors from other ML models</p>
+<p><strong>Measure data effectiveness</strong>: feature predictive power/ feature eng/ feature selection</p>
+<p><strong>Raters/Taggers:</strong> generalist (any people)/ subject matter expert/ users</p>
 <h3 id="labeling-data">Labeling Data</h3>
+<ul>
+<li>mispredictions do not have uniform cost to your business</li>
+<li>model objectives is probably a <strong>proxy</strong> for your business objectives</li>
+<li>the real world is <strong>changing</strong></li>
+</ul>
+<p><strong>Data and Concept Change in Prod ML</strong></p>
+<ul>
+<li>data and scope changes</li>
+<li>monitor models and validate data to find problems early</li>
+<li>changing GT - label new training data</li>
+</ul>
+<p><strong>Model performance decays over time</strong>: (due to data and concept drift) can be slow (months, years) or fast (weeks - fashion, days, hours - stock exchange)<br>
+<strong>Model retraining helps to improve the performance</strong></p>
+<p><strong>Data labeling methods:</strong></p>
+<ul>
+<li>
+<p><em>process feedback (direct labeling)</em> CTR rate, recommendation -&gt; buy or not - <strong>allow frequent retrain on a fresh data</strong>/ similar to reinforcement learning/ suitable for rare usecases</p>
+</li>
+<li>
+<p><em>human labeling</em> : taggers road lanes</p>
+</li>
+<li>
+<p>semi supervised labeling</p>
+</li>
+<li>
+<p>active learning</p>
+</li>
+<li>
+<p>weak supervision</p>
+</li>
+</ul>
+<p><strong>tools for log analysis</strong></p>
+<ul>
+<li><a href="https://www.elastic.co/logstash/"><em>Logstash</em></a></li>
+<li><a href="https://www.fluentd.org/"><em>Fluentd</em></a></li>
+<li>cloud log analysis (google cloud logging/ Azure monitor)</li>
+</ul>
+<p><strong>Human labeling</strong><br>
+raw data -&gt; ask people to label -&gt; labeled data</p>
+<ul>
+<li>need instructions</li>
+<li>disagreements between taggers</li>
+<li>advantage: good labels, common way</li>
+<li>disadvantage: may be complected /expensive / slow, not possible to produce huge amount of data, if need experts</li>
+</ul>
 <h3 id="validating-data">Validating Data</h3>
 <h2 id="week-2">Week 2</h2>
 <h2 id="week-3">Week 3</h2>
