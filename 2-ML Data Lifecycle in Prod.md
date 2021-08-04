@@ -127,6 +127,21 @@ raw data -&gt; ask people to label -&gt; labeled data</p>
 <li>disadvantage: may be complected /expensive / slow, not possible to produce huge amount of data, if need experts</li>
 </ul>
 <h3 id="validating-data">Validating Data</h3>
+<p><strong>Data Drift</strong> - change in data over time (e.g. data collected once a day)<br>
+<strong>Data Skew</strong> - diff between two static versions, of diff sources e.g. training data vs production data (serving)<br>
+<strong>Concpet Drif</strong> - change in target variable</p>
+<p><strong>Data issues:</strong></p>
+<ul>
+<li>detecting schema skew: int-&gt; float, nan-&gt; Null, 2 categories -&gt; 3</li>
+</ul>
+<p><img src="https://www.dropbox.com/s/weakijwxu580w4g/c2w1_3.png?raw=1" alt=""><br>
+<strong>Solution: continuously monitoring and evaluate the data</strong><br>
+Compare training data stats vs Serving data and detect anomalies</p>
+<p><strong>TensorFlow Data Validation (TFDV)</strong></p>
+<ul>
+<li>schema skew/ feature skew/ distribution skew</li>
+<li>support Teras of data</li>
+</ul>
 <h2 id="week-2">Week 2</h2>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
