@@ -21,7 +21,11 @@
 <li><a href="#validating-data">Validating Data</a></li>
 </ul>
 </li>
-<li><a href="#week-2">Week 2</a></li>
+<li><a href="#week-2">Week 2</a>
+<ul>
+<li><a href="#feature-engineering">Feature Engineering</a></li>
+</ul>
+</li>
 <li><a href="#week-3">Week 3</a></li>
 <li><a href="#week-4">Week 4</a></li>
 </ul>
@@ -140,9 +144,18 @@ Compare training data stats vs Serving data and detect anomalies</p>
 <p><strong>TensorFlow Data Validation (TFDV)</strong></p>
 <ul>
 <li>schema skew/ feature skew/ distribution skew</li>
-<li>support Teras of data</li>
+<li>feature drift</li>
 </ul>
 <h2 id="week-2">Week 2</h2>
+<h3 id="feature-engineering">Feature Engineering</h3>
+<p><img src="https://www.dropbox.com/s/wah7svspckj78sx/c2w2_1.png?raw=1" alt=""><br>
+<img src="https://www.dropbox.com/s/6vst19drtlrxvhn/c2w2_2.png?raw=1" alt=""><br>
+<strong>MaxMinNorm</strong> = (X - X_min) / (X_max - X_min) - good if data distr is not Gaussian: [0, 1]<br>
+<strong>Standartization (z-score)</strong> = (X - mean)/std, around 0: [-inf, +inf]</p>
+<p><strong>Bucketizing/ Binning</strong></p>
+<p><strong>Dimensionalty reduction</strong> PCA, t-SNE, UMAP<br>
+Embedding projector.</p>
+<p><strong>Feature crosses</strong> - combines multiple features into a new feature</p>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
