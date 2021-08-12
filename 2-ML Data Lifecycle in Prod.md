@@ -24,6 +24,7 @@
 <li><a href="#week-2">Week 2</a>
 <ul>
 <li><a href="#feature-engineering">Feature Engineering</a></li>
+<li><a href="#feature-transformation-at-scale">Feature Transformation at Scale</a></li>
 </ul>
 </li>
 <li><a href="#week-3">Week 3</a></li>
@@ -151,11 +152,19 @@ Compare training data stats vs Serving data and detect anomalies</p>
 <p><img src="https://www.dropbox.com/s/wah7svspckj78sx/c2w2_1.png?raw=1" alt=""><br>
 <img src="https://www.dropbox.com/s/6vst19drtlrxvhn/c2w2_2.png?raw=1" alt=""><br>
 <strong>MaxMinNorm</strong> = (X - X_min) / (X_max - X_min) - good if data distr is not Gaussian: [0, 1]<br>
-<strong>Standartization (z-score)</strong> = (X - mean)/std, around 0: [-inf, +inf]</p>
-<p><strong>Bucketizing/ Binning</strong></p>
-<p><strong>Dimensionalty reduction</strong> PCA, t-SNE, UMAP<br>
+<strong>Standartization (z-score)</strong> = (X - mean)/std, around 0: [-inf, +inf]<br>
+<strong>Bucketizing/ Binning</strong><br>
+<strong>Dimensionalty reduction</strong> PCA, t-SNE, UMAP<br>
 Embedding projector.</p>
 <p><strong>Feature crosses</strong> - combines multiple features into a new feature</p>
+<h3 id="feature-transformation-at-scale">Feature Transformation at Scale</h3>
+<p>consistent and reproducible pipeline</p>
+<p>Preprocessing granularity:<br>
+Instance level vs Full data pass: for clipping, scaling, bucketizing etc. need to pass all data<br>
+<strong>At serving time we can do only instance-level</strong><br>
+preprocessing training vs serving</p>
+<p>transform per batch (use batch statistic only and not full dataset statistics)<br>
+there is a differences btw batches, can be good or bad</p>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
