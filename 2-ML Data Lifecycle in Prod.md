@@ -197,7 +197,39 @@ TFX libraries include:</p>
 </li>
 </ul>
 <h3 id="feature-selection">Feature Selection</h3>
-<p>Feature space</p>
+<p>Feature space<br>
+Feature space <strong>coverage</strong>: the training data should “cover” the serving data:</p>
+<ul>
+<li>same numerical ranges</li>
+<li>same classes</li>
+<li>similar characteristics for images (object sizes, orientations etc.)</li>
+<li>similar vocabulary for NLP</li>
+</ul>
+<p><strong>Ensure feature space coverage</strong></p>
+<ul>
+<li>seasonality, trend, drift</li>
+<li>continuous monitoring -&gt; key for success</li>
+</ul>
+<p><strong>Feature Selection - FS</strong></p>
+<ul>
+<li>identify best f</li>
+<li>remove f that don’t influence the outcome</li>
+<li>reduce that size of feature space<br>
+<strong>Why?</strong> -Reduce storage and IO, minimize training/inference costs<br>
+<strong>Unsupervised FS</strong>: not consider correlation to Y, remove redundant features (highly correlated fs)<br>
+<strong>Supervised FS</strong>:  Filter method, Wrapper Method, Embedded Methods<br>
+<strong>Filter method</strong> - correlated features are usually redundant -&gt; remove them
+<ul>
+<li>Pearson correlation btw features and btw target</li>
+<li>Backward: start from all -&gt; select best subset<br>
+Spearman’s correlation -&gt; non parametric, check the <em>ranks</em> instead of the raw values<br>
+Mutual info<br>
+Chi square<br>
+correlation matrix<br>
+sklearn</li>
+</ul>
+</li>
+</ul>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
