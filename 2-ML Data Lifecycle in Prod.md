@@ -25,6 +25,8 @@
 <ul>
 <li><a href="#feature-engineering">Feature Engineering</a></li>
 <li><a href="#feature-transformation-at-scale">Feature Transformation at Scale</a></li>
+<li><a href="#tensorflow-transforms">TensorFlow Transforms</a></li>
+<li><a href="#feature-selection">Feature Selection</a></li>
 </ul>
 </li>
 <li><a href="#week-3">Week 3</a></li>
@@ -165,6 +167,37 @@ Instance level vs Full data pass: for clipping, scaling, bucketizing etc. need t
 preprocessing training vs serving</p>
 <p>transform per batch (use batch statistic only and not full dataset statistics)<br>
 there is a differences btw batches, can be good or bad</p>
+<h3 id="tensorflow-transforms">TensorFlow Transforms</h3>
+<p><img src="https://www.dropbox.com/s/7b54d4is6jnfzzg/c2w2_3.png?raw=1" alt=""><br>
+<strong>Tensorflow Extended</strong>:<br>
+<a href="https://blog.tensorflow.org/2020/09/brief-history-of-tensorflow-extended-tfx.html">https://blog.tensorflow.org/2020/09/brief-history-of-tensorflow-extended-tfx.html</a><br>
+<a href="https://www.tensorflow.org/tfx/guide#tfx_libraries">https://www.tensorflow.org/tfx/guide#tfx_libraries</a><br>
+TFX libraries include:</p>
+<ul>
+<li>
+<p><a href="https://www.tensorflow.org/tfx/guide/tfdv"><strong>TensorFlow Data Validation (TFDV)</strong></a>  statistics, schema, anomalies</p>
+</li>
+<li>
+<p><a href="https://www.tensorflow.org/tfx/guide/tft"><strong>TensorFlow Transform (TFT)</strong></a>  is a library for preprocessing data with TensorFlow.</p>
+</li>
+<li>
+<p><a href="https://www.tensorflow.org/tfx/guide/train"><strong>TensorFlow</strong></a></p>
+</li>
+<li>
+<p><a href="https://www.tensorflow.org/tutorials/keras/keras_tuner">KerasTuner</a>  is used for tuning hyperparameters</p>
+</li>
+<li>
+<p><a href="https://www.tensorflow.org/tfx/guide/tfma"><strong>TensorFlow Model Analysis (TFMA)</strong></a>  is a library for evaluating TensorFlow models.</p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/metadata"><strong>TensorFlow Metadata (TFMD)</strong></a>  provides standard representations for metadata that are useful when training machine learning models with TensorFlow.</p>
+</li>
+<li>
+<p><a href="https://www.tensorflow.org/tfx/guide/mlmd"><strong>ML Metadata (MLMD)</strong></a>  is a library for recording and retrieving metadata associated with ML developer and data scientist workflows.</p>
+</li>
+</ul>
+<h3 id="feature-selection">Feature Selection</h3>
+<p>Feature space</p>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
