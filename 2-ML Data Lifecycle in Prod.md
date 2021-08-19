@@ -221,14 +221,27 @@ Feature space <strong>coverage</strong>: the training data should “cover” th
 <strong>Filter method</strong> - correlated features are usually redundant -&gt; remove them
 <ul>
 <li>Pearson correlation btw features and btw target</li>
-<li>Backward: start from all -&gt; select best subset<br>
-Spearman’s correlation -&gt; non parametric, check the <em>ranks</em> instead of the raw values<br>
-Mutual info<br>
-Chi square<br>
-correlation matrix<br>
-sklearn</li>
+<li>Start from all -&gt; select best subset based on some criteria (1. inter-feature correlation 2. model quality)</li>
+<li>Spearman’s correlation -&gt; non parametric, check the <em>ranks</em> instead of the raw values</li>
+<li>Mutual info</li>
+<li>Chi square</li>
+<li>Correlation matrix</li>
+<li>sklearn</li>
 </ul>
 </li>
+</ul>
+<p><strong>Wrapper methods</strong></p>
+<ul>
+<li>Forward selection, start with 1 feature,  iteratively add best feature, repeat when improvement &lt; threshold</li>
+<li>Backward elimination: start with all, literally remove feature [keep best model], …</li>
+<li>Recursive features - <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html">https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html</a><br>
+require a model which can rank features by importance</li>
+</ul>
+<p><strong>Embedded methods</strong></p>
+<ul>
+<li>L1/L2 reg</li>
+<li>Feature importance (e.g in RandomForest)<br>
+<em>Embedded methods</em> combine the best of both worlds, filter and wrapper methods. It more efficient than filter methods, faster than wrapper methods</li>
 </ul>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
