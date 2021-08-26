@@ -29,7 +29,12 @@
 <li><a href="#feature-selection">Feature Selection</a></li>
 </ul>
 </li>
-<li><a href="#week-3">Week 3</a></li>
+<li><a href="#week-3">Week 3</a>
+<ul>
+<li><a href="#data-journey-and-data-storage">Data Journey and Data Storage</a></li>
+<li><a href="#evolving-data">Evolving Data</a></li>
+</ul>
+</li>
 <li><a href="#week-4">Week 4</a></li>
 </ul>
 </li>
@@ -244,6 +249,26 @@ require a model which can rank features by importance</li>
 <em>Embedded methods</em> combine the best of both worlds, filter and wrapper methods. It more efficient than filter methods, faster than wrapper methods</li>
 </ul>
 <h2 id="week-3">Week 3</h2>
+<h3 id="data-journey-and-data-storage">Data Journey and Data Storage</h3>
+<p>Raw features and labels -&gt; data transforms (feature eng, etc) -&gt; training<br>
+Data provenance (origin)<br>
+Data lineage(history) - useful for debugging/understanding issues</p>
+<p>Data versioning<br>
+<strong>ML requires reproducibility</strong></p>
+<ul>
+<li>code versioning: github</li>
+<li>environment versioning: Docker/ Terraform</li>
+<li><strong>Data versioning</strong> require different tools: <em>DVC</em>, <em>Git-LFS</em></li>
+</ul>
+<p><strong>Metadata</strong>: tracking artifacts and pipeline changes [kind of logging in code]<br>
+ML metadata terminology</p>
+<ul>
+<li>units: artifact, execution, context</li>
+<li>types</li>
+<li>relationships</li>
+</ul>
+<p><code>ml-metadata</code></p>
+<h3 id="evolving-data">Evolving Data</h3>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
