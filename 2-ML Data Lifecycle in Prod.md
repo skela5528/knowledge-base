@@ -267,8 +267,16 @@ ML metadata terminology</p>
 <li>types</li>
 <li>relationships</li>
 </ul>
-<p><code>ml-metadata</code></p>
+<p><strong><code>ml-metadata</code> Lab</strong></p>
 <h3 id="evolving-data">Evolving Data</h3>
+<p><strong>Schema</strong>: containing a summary about the features in a dataset. Feature name, data type, required or optional, valency, domain: range, categories, default values.</p>
+<ul>
+<li>can help find problems, anomalies in a data set. E.g. missing values, values in a wrong type.</li>
+<li>system resilience to data issues</li>
+<li>scalability</li>
+<li>schema multiple versions (training and prod) - version control for schema !!!<br>
+multiple schema for different scenarios (same app on e.g. mobile dev vs desktop, maybe diff features available)</li>
+</ul>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
