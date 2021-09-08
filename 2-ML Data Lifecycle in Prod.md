@@ -33,9 +33,9 @@
 <ul>
 <li><a href="#data-journey-and-data-storage">Data Journey and Data Storage</a></li>
 <li><a href="#evolving-data">Evolving Data</a></li>
+<li><a href="#feature-stores">Feature stores</a></li>
 </ul>
 </li>
-<li><a href="#week-4">Week 4</a></li>
 </ul>
 </li>
 </ul>
@@ -277,7 +277,17 @@ ML metadata terminology</p>
 <li>schema multiple versions (training and prod) - version control for schema !!!<br>
 multiple schema for different scenarios (same app on e.g. mobile dev vs desktop, maybe diff features available)</li>
 </ul>
-<h2 id="week-4">Week 4</h2>
+<p><em><strong>Your system and your development process must treat data errors as first-class citizens, just like code bugs.</strong></em></p>
+<h3 id="feature-stores">Feature stores</h3>
+<p><strong>Data warehouse</strong> - aggregate data from multiple sources, processed and analyzed, not real time.<br>
+subject oriented<br>
+<img src="https://www.dropbox.com/s/xywb7qzknf2we2p/c2w3_1.png?raw=1" alt=""><br>
+<strong>Data Lakes</strong><br>
+system or repository of data stored in its natural and raw format, which is usually in the form of blobs or files.<br>
+May include structured / semi-structures/ unstructured data<br>
+Don’t do any processing (data in raw format ) - don’t require a schema<br>
+Blob - binary large object (image, audio file, code exe, etc.)<br>
+<img src="https://www.dropbox.com/s/96uh6lf74rejsnl/c2w3_2.png?raw=1" alt=""></p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
