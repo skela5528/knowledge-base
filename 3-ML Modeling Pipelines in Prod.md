@@ -20,6 +20,11 @@
 <li><a href="#automl-on-the-cloud">AutoML on the Cloud</a></li>
 </ul>
 </li>
+<li><a href="#week-2">Week 2</a>
+<ul>
+<li><a href="#dimensionality-effect">Dimensionality Effect</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -76,6 +81,19 @@ Data Ingestion -&gt; D validation -&gt; Feat Eng -&gt; Train -&gt; Validation</p
 <li><strong>Amazon SageMaker Autopilot</strong> more classical scenarios [structured data]</li>
 <li><strong>Microsoft Azure  AutoML</strong></li>
 <li><strong>Google Cloud AutoML</strong> Auto ML VIsion / VideoIntelegence/ NLP/ Translation -&gt; for different tasks/ Tables (for structured data)</li>
+</ul>
+<h2 id="week-2">Week 2</h2>
+<h3 id="dimensionality-effect">Dimensionality Effect</h3>
+<p>on NN:</p>
+<ul>
+<li>yes NN can perform kind of feature selection</li>
+<li>but it’s not efficient
+<ul>
+<li>much model power will be shut off to ignore unwanted features</li>
+<li>consume extra space and resources, both model and data</li>
+<li>unwanted f can introduce noise</li>
+</ul>
+</li>
 </ul>
 </div>
 </body>
