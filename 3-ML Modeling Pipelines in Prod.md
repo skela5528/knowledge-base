@@ -22,7 +22,9 @@
 </li>
 <li><a href="#week-2">Week 2</a>
 <ul>
-<li><a href="#dimensionality-effect">Dimensionality Effect</a></li>
+<li><a href="#dimensional-effect">Dimensional Effect</a></li>
+<li><a href="#why-is-high-dim-data-a-problem">Why is high-dim data a problem?</a></li>
+<li><a href="#dimensionality-reduction">Dimensionality Reduction</a></li>
 </ul>
 </li>
 </ul>
@@ -83,7 +85,7 @@ Data Ingestion -&gt; D validation -&gt; Feat Eng -&gt; Train -&gt; Validation</p
 <li><strong>Google Cloud AutoML</strong> Auto ML VIsion / VideoIntelegence/ NLP/ Translation -&gt; for different tasks/ Tables (for structured data)</li>
 </ul>
 <h2 id="week-2">Week 2</h2>
-<h3 id="dimensionality-effect">Dimensionality Effect</h3>
+<h3 id="dimensional-effect">Dimensional Effect</h3>
 <p>on NN:</p>
 <ul>
 <li>yes NN can perform kind of feature selection</li>
@@ -92,6 +94,34 @@ Data Ingestion -&gt; D validation -&gt; Feat Eng -&gt; Train -&gt; Validation</p
 <li>much model power will be shut off to ignore unwanted features</li>
 <li>consume extra space and resources, both model and data</li>
 <li>unwanted f can introduce noise</li>
+</ul>
+</li>
+</ul>
+<h3 id="why-is-high-dim-data-a-problem">Why is high-dim data a problem?</h3>
+<ul>
+<li>more dims more features</li>
+<li>risk of over-fitting</li>
+<li>distances grow more and more alike</li>
+<li>no clear distinction btw clusters/classes<br>
+“As we add more dims we also increase the processing power … as well as the amount of training data required.”</li>
+<li>redundant/ irrelevant features</li>
+<li>more noise added than signal</li>
+<li>hard to interpret and vis</li>
+<li>hard to store and proc<br>
+<img src="https://www.dropbox.com/s/bc3qa9ca5j8lf74/c3w2_1.png?raw=1" alt=""><br>
+<strong>The Hughes effect</strong><br>
+The more the features, the larger the hypothesis space.<br>
+The lower the hypothesis space:</li>
+<li>the easier it’s to find the correct hypothesis</li>
+<li>the less examples you need</li>
+</ul>
+<h3 id="dimensionality-reduction">Dimensionality Reduction</h3>
+<ul>
+<li>Linear dim reduction
+<ul>
+<li>LDA Linear discriminant analysis (for classification)</li>
+<li>PLS partial least squares (regression)</li>
+<li>PCA Principal componen (unsup)</li>
 </ul>
 </li>
 </ul>
