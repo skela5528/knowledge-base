@@ -125,6 +125,19 @@ The lower the hypothesis space:</li>
 </ul>
 </li>
 </ul>
+<p><strong>Singular value decomposition (SVD)</strong></p>
+<ul>
+<li>decompose not squared matrices</li>
+<li>useful for sparse matrices as TF-IDF</li>
+<li>remove redundant features from dataset</li>
+<li>decompose to 3 matrices: <strong>M=UEV*</strong></li>
+</ul>
+<p><strong>Independent Component Analysis (ICA)</strong></p>
+<ul>
+<li>PCA seeks directions on f space that minimize reconstruction error</li>
+<li>ICA seeks directions that are most stat. independent</li>
+<li>ICA address higher order dependence</li>
+</ul>
 </div>
 </body>
 
