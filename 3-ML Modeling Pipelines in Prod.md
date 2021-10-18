@@ -25,6 +25,7 @@
 <li><a href="#dimensional-effect">Dimensional Effect</a></li>
 <li><a href="#why-is-high-dim-data-a-problem">Why is high-dim data a problem?</a></li>
 <li><a href="#dimensionality-reduction">Dimensionality Reduction</a></li>
+<li><a href="#quantization-and-pruning">Quantization and Pruning</a></li>
 </ul>
 </li>
 </ul>
@@ -138,6 +139,45 @@ The lower the hypothesis space:</li>
 <li>ICA seeks directions that are most stat. independent</li>
 <li>ICA address higher order dependence</li>
 </ul>
+<p><strong>Non-negative Matrix Factorization (NMF)</strong></p>
+<h3 id="quantization-and-pruning">Quantization and Pruning</h3>
+<ul>
+<li>Mobile, IoT will grow and will require more ML</li>
+<li>Demands move ML capability from cloud to on-device</li>
+<li>privacy (require to keep a data on device)</li>
+</ul>
+<p><strong>Why quantize neural net?</strong></p>
+<ul>
+<li>NNs have many params and take up space</li>
+<li>shrinking model file size</li>
+<li>reduce comp resources</li>
+<li>model run faster and use less power</li>
+</ul>
+<p><strong>Trade-offs</strong></p>
+<ul>
+<li>accuracy</li>
+<li>loss of interpretability</li>
+</ul>
+<p><strong>Post-training quantization</strong><br>
+avalible at tf.lite</p>
+<pre><code>import tensorflow as tf
+converter = tf.lite.TFLiteConverter.from_saved_model(saved_model_dir)
+converter.optimizations = [tf.lite.Optimize.DEFAULT]
+tflite_quant_model = converter.convert()
+</code></pre>
+<p><strong>Quantization-aware training (QAT)</strong></p>
+<ul>
+<li>insert fake quantization (FQ) noted in the forward pass</li>
+<li>the model learn better quantization</li>
+<li>avalible at <code>tensorflow_model_optimization</code></li>
+</ul>
+<p><strong>Pruning</strong></p>
+<ul>
+<li>reduce the number of params and/or operations</li>
+<li>model sparsity</li>
+<li>avalible at <code>tensorflow_model_optimization</code></li>
+</ul>
+<p><img src="https://www.dropbox.com/s/89pjvnhy91mv994/c3w2_2.png?raw=1" alt=""></p>
 </div>
 </body>
 
