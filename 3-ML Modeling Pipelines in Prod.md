@@ -28,6 +28,7 @@
 <li><a href="#quantization-and-pruning">Quantization and Pruning</a></li>
 </ul>
 </li>
+<li><a href="#week-3">Week 3</a></li>
 </ul>
 </li>
 </ul>
@@ -178,6 +179,7 @@ tflite_quant_model = converter.convert()
 <li>avalible at <code>tensorflow_model_optimization</code></li>
 </ul>
 <p><img src="https://www.dropbox.com/s/89pjvnhy91mv994/c3w2_2.png?raw=1" alt=""></p>
+<h2 id="week-3">Week 3</h2>
 </div>
 </body>
 
