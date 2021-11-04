@@ -28,7 +28,12 @@
 <li><a href="#quantization-and-pruning">Quantization and Pruning</a></li>
 </ul>
 </li>
-<li><a href="#week-3">Week 3</a></li>
+<li><a href="#week-3">Week 3</a>
+<ul>
+<li><a href="#distributed-training">Distributed Training</a></li>
+<li><a href="#knowledge-distillation">Knowledge Distillation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -180,6 +185,33 @@ tflite_quant_model = converter.convert()
 </ul>
 <p><img src="https://www.dropbox.com/s/89pjvnhy91mv994/c3w2_2.png?raw=1" alt=""></p>
 <h2 id="week-3">Week 3</h2>
+<h3 id="distributed-training">Distributed Training</h3>
+<p>more efficient, speed-up<br>
+<strong>data vs model parallelism</strong></p>
+<p><strong>data parallelism:</strong> models are replicated onto different GPU (workers) and data split btw them.</p>
+<ul>
+<li>each worker compute loss on their data</li>
+<li>do backprop and update the model</li>
+<li>pass the deltas to the second worker (synchronize) in the end of each bach</li>
+<li>maybe synchronous or asynchronous</li>
+</ul>
+<p><strong>model parallesm</strong>:  model too large to fit into one device, then they divided into partitions,  and different partitions goes to different workers.</p>
+<p><code>tf.distribute.Strategy</code></p>
+<p><em>One Device strategy</em> - no distribution (e.g. for testing your code before switching to distr. training)<br>
+<em>Mirrored strategy</em> - on one machine with multiple GPUs<br>
+<em>Parameter Server strategy</em> - some machines are workers, and other as parameter servers</p>
+<p><em>Fault tolerance</em><br>
+if one worker fail?</p>
+<p><strong>Pipelines</strong></p>
+<ul>
+<li>prefetching</li>
+<li>parallelize data extraction and transformation</li>
+<li>caching</li>
+</ul>
+<h3 id="knowledge-distillation">Knowledge Distillation</h3>
+<p><strong>Teacher and Student Nets</strong></p>
+<p>Big sophisticated nets have a good quality but difficult for deployment.</p>
+<p>Knowledge Dist. goal - duplicate the performance of complex model in a <strong>simpler</strong> model.</p>
 </div>
 </body>
 
