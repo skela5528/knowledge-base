@@ -212,6 +212,17 @@ if one worker fail?</p>
 <p><strong>Teacher and Student Nets</strong></p>
 <p>Big sophisticated nets have a good quality but difficult for deployment.</p>
 <p>Knowledge Dist. goal - duplicate the performance of complex model in a <strong>simpler</strong> model.</p>
+<p><strong>Teacher</strong> - training first with normal training procedure<br>
+<strong>Student</strong> - learn teacher probability prediction  - “soft target”<br>
+the probability is much more informative then predictions themself.</p>
+<p><img src="https://www.dropbox.com/s/9od6fsd1pxczqy1/c3w3_1.png?raw=1" alt="">&gt; The relative probabilities of the incorrect outputs tell us a lot about how the model tend to generalize. — <a href="https://arxiv.org/pdf/1503.02531.pdf">https://arxiv.org/pdf/1503.02531.pdf</a></p>
+<p><strong>This is the dark knowledge!</strong> Softened probabilities reveal this dark (hidden) knowledge learnt by the model. Extracting and using this dark knowledge is also known as <strong><em>distillation</em></strong>. We will revisit this concept again in the next section with a real world example.</p>
+<p><strong>Tecniques</strong></p>
+<ol>
+<li>Weight objectives (student and teacher) and combine during backprop</li>
+<li>Compare distributions of the predictions using KL divergence</li>
+</ol>
+<p>Loss = (1-a)L<sub>hard</sub> + a*L<sub>KL</sub></p>
 </div>
 </body>
 
