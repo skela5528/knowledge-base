@@ -34,6 +34,7 @@
 <li><a href="#knowledge-distillation">Knowledge Distillation</a></li>
 </ul>
 </li>
+<li><a href="#week-4---model-performance-analysis">Week 4 - Model Performance Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -217,12 +218,23 @@ if one worker fail?</p>
 the probability is much more informative then predictions themself.</p>
 <p><img src="https://www.dropbox.com/s/9od6fsd1pxczqy1/c3w3_1.png?raw=1" alt="">&gt; The relative probabilities of the incorrect outputs tell us a lot about how the model tend to generalize. — <a href="https://arxiv.org/pdf/1503.02531.pdf">https://arxiv.org/pdf/1503.02531.pdf</a></p>
 <p><strong>This is the dark knowledge!</strong> Softened probabilities reveal this dark (hidden) knowledge learnt by the model. Extracting and using this dark knowledge is also known as <strong><em>distillation</em></strong>. We will revisit this concept again in the next section with a real world example.</p>
-<p><strong>Tecniques</strong></p>
+<p><strong>Techniques</strong></p>
 <ol>
 <li>Weight objectives (student and teacher) and combine during backprop</li>
 <li>Compare distributions of the predictions using KL divergence</li>
 </ol>
 <p>Loss = (1-a)L<sub>hard</sub> + a*L<sub>KL</sub></p>
+<h2 id="week-4---model-performance-analysis">Week 4 - Model Performance Analysis</h2>
+<p><em>black box evaluation</em> vs <em>model introspection</em></p>
+<p><strong>Black box evaluation</strong> - tensorboard, model precision/recall/accuracy , LR</p>
+<p><strong>Model introspection</strong> - kernels visualization, what part of image has higher correlation with each class?</p>
+<p><strong>Slice your Data!!!</strong> for analysis</p>
+<ul>
+<li>to discover where your under-perform / over-perform</li>
+<li>which slices to analyze require some data and domain knowledge</li>
+</ul>
+<p><strong>streaming vs full-pass metrics</strong></p>
+<p><strong>Tensorflow Model Analysis (TFMA)</strong></p>
 </div>
 </body>
 
