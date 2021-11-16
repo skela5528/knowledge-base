@@ -34,7 +34,11 @@
 <li><a href="#knowledge-distillation">Knowledge Distillation</a></li>
 </ul>
 </li>
-<li><a href="#week-4---model-performance-analysis">Week 4 - Model Performance Analysis</a></li>
+<li><a href="#week-4---model-performance-analysis">Week 4 - Model Performance Analysis</a>
+<ul>
+<li><a href="#model-debugging">Model Debugging</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -235,6 +239,42 @@ the probability is much more informative then predictions themself.</p>
 </ul>
 <p><strong>streaming vs full-pass metrics</strong></p>
 <p><strong>Tensorflow Model Analysis (TFMA)</strong></p>
+<ol>
+<li>export trained model for TFMA</li>
+<li>create eval_config: slices, metrics, config</li>
+<li>analyze model</li>
+<li>visualization</li>
+</ol>
+<h3 id="model-debugging">Model Debugging</h3>
+<p><strong>Model robustness</strong> - it’s much more than generalization. Is the model accurate even for slightly corrupted input data?</p>
+<p><strong>Model Debugging Goals</strong></p>
+<ul>
+<li>improve model transparency</li>
+<li>social discrimination</li>
+<li>security against attacks</li>
+<li>privacy</li>
+<li>model decay</li>
+</ul>
+<p><strong>Debugging Techniques</strong></p>
+<ul>
+<li>benchmark models<br>
+compare to simple, trusted and interpretable models solving the same problem. Maybe it’s all you need (simple model), it can show on a weak points of a complex model etc.</li>
+</ul>
+<p><strong>Sensitivity analysis</strong></p>
+<ul>
+<li>change single feature value and hold other unchanged. See how affect each feature the model predictions.</li>
+</ul>
+<p>sensitivity can mean vulnerability!</p>
+<p><strong>Informational vs behavior harms</strong></p>
+<ul>
+<li>information leakage</li>
+<li>manipulating the model behavior</li>
+</ul>
+<p><a href="https://github.com/cleverhans-lab/cleverhans">https://github.com/cleverhans-lab/cleverhans</a> -<br>
+Python library to benchmark machine learning systems’ vulnerability to adversarial examples.</p>
+<p><strong>defensive distillation</strong></p>
+<p><strong>Adversarial example</strong><br>
+<a href="https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/adversarial_fgsm.ipynb">https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/adversarial_fgsm.ipynb</a></p>
 </div>
 </body>
 
