@@ -275,6 +275,15 @@ Python library to benchmark machine learning systems’ vulnerability to adversa
 <p><strong>defensive distillation</strong></p>
 <p><strong>Adversarial example</strong><br>
 <a href="https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/adversarial_fgsm.ipynb">https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/generative/adversarial_fgsm.ipynb</a></p>
+<p><strong>Residual analysis</strong></p>
+<ul>
+<li>measure the difference between the model predictions and GT</li>
+<li>not always you have GT</li>
+<li>random distributed error are good</li>
+<li>correlated or systematic errors show that the model can be improved</li>
+<li>not correlated with the features (including removed features)</li>
+<li>no autocorrelation</li>
+</ul>
 </div>
 </body>
 
