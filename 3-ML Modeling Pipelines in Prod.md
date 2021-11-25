@@ -282,7 +282,21 @@ Python library to benchmark machine learning systems’ vulnerability to adversa
 <li>random distributed error are good</li>
 <li>correlated or systematic errors show that the model can be improved</li>
 <li>not correlated with the features (including removed features)</li>
-<li>no autocorrelation</li>
+<li>no auto-correlation</li>
+</ul>
+<p><strong>Model Remedeation</strong></p>
+<ul>
+<li>data augmentation: also synthetic data, noised data, helps for unbalanced classes</li>
+<li>discrimination remediation</li>
+<li>model monitoring</li>
+<li>anomaly detection</li>
+</ul>
+<p><strong>Fairness</strong><br>
+fairness indicators lib from TF</p>
+<p>how to measure</p>
+<ul>
+<li>percentage of points classified as positive/negative across different groups -&gt; should be similar</li>
+<li>actually all metric should be similar in sub-groups</li>
 </ul>
 </div>
 </body>
