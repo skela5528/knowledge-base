@@ -36,6 +36,11 @@ training the model -&gt; make the model available to the users -&gt; provide ser
 <li><em>throughput:</em> num of successful requests served per unit time (e.g. one second)</li>
 <li><em>cost</em></li>
 </ul>
+<p>model complexity -&gt; increase the cost! - tradeoff</p>
+<p><strong>Data centers vs embedded device</strong><br>
+<img src="https://www.dropbox.com/s/vocc67k8unkznmb/c4w1_1.png?raw=1" alt=""><br>
+server arch:<br>
+<img src="https://www.dropbox.com/s/cxofajr110umuze/c4w1_2.png?raw=1" alt=""></p>
 <h2 id="week-2">Week 2</h2>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
