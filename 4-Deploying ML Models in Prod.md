@@ -18,7 +18,12 @@
 <li><a href="#introduction-to-model-serving">Introduction to Model Serving</a></li>
 </ul>
 </li>
-<li><a href="#week-2">Week 2</a></li>
+<li><a href="#week-2">Week 2</a>
+<ul>
+<li><a href="#model-serving-arch">Model Serving Arch</a></li>
+</ul>
+</li>
+<li><a href="#scaling-infrastructure">Scaling Infrastructure</a></li>
 <li><a href="#week-3">Week 3</a></li>
 <li><a href="#week-4">Week 4</a></li>
 </ul>
@@ -42,6 +47,19 @@ training the model -&gt; make the model available to the users -&gt; provide ser
 server arch:<br>
 <img src="https://www.dropbox.com/s/cxofajr110umuze/c4w1_2.png?raw=1" alt=""></p>
 <h2 id="week-2">Week 2</h2>
+<h3 id="model-serving-arch">Model Serving Arch</h3>
+<p><em>On Prem</em> (On-premises software, running in the premises - property the opposite of remote) vs <em>On Cloud</em></p>
+<p>Model servers:</p>
+<ul>
+<li><a href="https://www.tensorflow.org/tfx/serving/architecture">Tensorflow Serving</a></li>
+<li><a href="https://github.com/pytorch/serve">TorchServe</a></li>
+<li>KF Serving (Kubeflow)</li>
+<li>Triton inference server - nvidia</li>
+</ul>
+<h2 id="scaling-infrastructure">Scaling Infrastructure</h2>
+<p><strong>vertical scaling</strong> -&gt; bigger and more powerful machine/ hardware</p>
+<p><strong>horizontal scaling</strong>: add more machines !!! that’s usually a much better choice</p>
+<p><img src="https://www.dropbox.com/s/tisbm213aaqsyxc/c4w2_1.png?raw=1" alt=""></p>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
