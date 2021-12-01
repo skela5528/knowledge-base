@@ -23,7 +23,12 @@
 <li><a href="#model-serving-arch">Model Serving Arch</a></li>
 </ul>
 </li>
-<li><a href="#scaling-infrastructure">Scaling Infrastructure</a></li>
+<li><a href="#scaling-infrastructure">Scaling Infrastructure</a>
+<ul>
+<li><a href="#online-inference">Online Inference</a></li>
+<li><a href="#data-preprocessing">Data preprocessing</a></li>
+</ul>
+</li>
 <li><a href="#week-3">Week 3</a></li>
 <li><a href="#week-4">Week 4</a></li>
 </ul>
@@ -59,7 +64,21 @@ server arch:<br>
 <h2 id="scaling-infrastructure">Scaling Infrastructure</h2>
 <p><strong>vertical scaling</strong> -&gt; bigger and more powerful machine/ hardware</p>
 <p><strong>horizontal scaling</strong>: add more machines !!! that’s usually a much better choice</p>
-<p><img src="https://www.dropbox.com/s/tisbm213aaqsyxc/c4w2_1.png?raw=1" alt=""></p>
+<p><img src="https://www.dropbox.com/s/tisbm213aaqsyxc/c4w2_1.png?raw=1" alt=""><br>
+Containers much better than Virtual Machines<br>
+To use multiple containers efficient one need Container Orchestration Tools:<br>
+Kubernetes or Docker Swarm</p>
+<p>In containers, app instances don’t require separate operating systems. In addition, the abstraction of having them run within a container runtime gives you greater flexibility.</p>
+<h3 id="online-inference">Online Inference</h3>
+<p>Inference Optimization: infrastructure, model architecture,  model compilation</p>
+<h3 id="data-preprocessing">Data preprocessing</h3>
+<p>Before sending GET requites to the app</p>
+<ul>
+<li>correcting invalid values</li>
+<li>feature normalization</li>
+<li>one hot encoding, vectorization</li>
+<li>etc</li>
+</ul>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
