@@ -79,6 +79,7 @@ Kubernetes or Docker Swarm</p>
 <li>one hot encoding, vectorization</li>
 <li>etc</li>
 </ul>
+<p><img src="https://www.dropbox.com/s/57637r5uhp4ce9n/c4w2_2.png?raw=1" alt=""></p>
 <h2 id="week-3">Week 3</h2>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
