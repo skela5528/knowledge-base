@@ -29,7 +29,11 @@
 <li><a href="#data-preprocessing">Data preprocessing</a></li>
 </ul>
 </li>
-<li><a href="#week-3">Week 3</a></li>
+<li><a href="#week-3">Week 3</a>
+<ul>
+<li><a href="#experiments-management-and-tracking">Experiments Management and Tracking</a></li>
+</ul>
+</li>
 <li><a href="#week-4">Week 4</a></li>
 </ul>
 </li>
@@ -81,6 +85,7 @@ Kubernetes or Docker Swarm</p>
 </ul>
 <p><img src="https://www.dropbox.com/s/57637r5uhp4ce9n/c4w2_2.png?raw=1" alt=""></p>
 <h2 id="week-3">Week 3</h2>
+<h3 id="experiments-management-and-tracking">Experiments Management and Tracking</h3>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
