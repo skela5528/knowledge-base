@@ -32,6 +32,7 @@
 <li><a href="#week-3">Week 3</a>
 <ul>
 <li><a href="#experiments-management-and-tracking">Experiments Management and Tracking</a></li>
+<li><a href="#mlops">MLOps</a></li>
 </ul>
 </li>
 <li><a href="#week-4">Week 4</a></li>
@@ -86,6 +87,80 @@ Kubernetes or Docker Swarm</p>
 <p><img src="https://www.dropbox.com/s/57637r5uhp4ce9n/c4w2_2.png?raw=1" alt=""></p>
 <h2 id="week-3">Week 3</h2>
 <h3 id="experiments-management-and-tracking">Experiments Management and Tracking</h3>
+<ul>
+<li>ML requires a lot of experiments, tracking results is important</li>
+<li>ML debugging is difficult</li>
+<li>Small changes can lead to drastic changes in model performance (layers arch, GT etc) - need to track those changes</li>
+<li>Running experiments is time and costs consuming. Difficult to rerun -&gt; better to track properly</li>
+</ul>
+<p>__ track experiments:__</p>
+<ul>
+<li>
+<p>enable to reproduce results</p>
+</li>
+<li>
+<p>meaningfully compare experiments</p>
+</li>
+<li>
+<p>require to manage code and data versions, hyperparameters, env, metrics.</p>
+</li>
+<li>
+<p>organize in a meaningful way, make them available to access and collaborate on within the organization</p>
+</li>
+<li>
+<p>modular code</p>
+</li>
+<li>
+<p>git</p>
+</li>
+<li>
+<p>directory structures if use a shared repo</p>
+</li>
+<li>
+<p>config files</p>
+</li>
+</ul>
+<p><strong>Tools for exp tracking</strong></p>
+<ul>
+<li>experimental changes include changes in data</li>
+<li>Data Versioning:
+<ul>
+<li>Neptune - <a href="https://neptune.ai/">https://neptune.ai/</a> commercial</li>
+<li>Pachyderm - <a href="https://www.pachyderm.com/">https://www.pachyderm.com/</a></li>
+<li>Delta Lake</li>
+<li>Git LFS (large files storage) - <a href="https://git-lfs.github.com/">https://git-lfs.github.com/</a> - store the pointer to the big binary file in git when the actual file is stored in separate storage</li>
+<li>Dolt - <a href="https://www.dolthub.com/">https://www.dolthub.com/</a></li>
+<li>lakeFS <a href="https://lakefs.io/">https://lakefs.io/</a> - open source</li>
+<li>DVC</li>
+<li>ML-Metadata - TF family</li>
+</ul>
+</li>
+</ul>
+<p>in order to track results: save all parameters that can affect results + ADD MEANINGFUL TAGS and notes</p>
+<p>tensorBoard<br>
+<strong>wandb</strong> <a href="https://wandb.ai/site">https://wandb.ai/site</a></p>
+<h3 id="mlops">MLOps</h3>
+<p><strong>Data Scientists  vs SW eng</strong><br>
+DS:<br>
+- focus on fixed data sets<br>
+- focus on model metrics<br>
+- prrototyping in Jupyter notebooks<br>
+- expert in modeling techniques and feature engineering<br>
+- model size, cost, latency and fairness are often ignored</p>
+<p>SW eng:</p>
+<ul>
+<li>build a product</li>
+<li>concerned about cost, performance, stability, schedule</li>
+<li>identify quality through customer satisfaction</li>
+<li>scale solutions, handle large amounts of data</li>
+<li>consider requirements for security safety and fairness</li>
+<li>maintenance and extend the product over long periods</li>
+</ul>
+<p><strong>Key problems affecting ML today</strong><br>
+Those actually same problems that SW were in 90s:<br>
+<img src="https://www.dropbox.com/s/v2ahzflva58cyhp/c4w3_1.png?raw=1" alt=""><br>
+MLOps is bridging the ML and IT<br>
+<img src="https://www.dropbox.com/s/apaytpgzc302qk9/c4w3_2.png?raw=1" alt=""></p>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
