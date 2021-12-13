@@ -160,7 +160,25 @@ DS:<br>
 Those actually same problems that SW were in 90s:<br>
 <img src="https://www.dropbox.com/s/v2ahzflva58cyhp/c4w3_1.png?raw=1" alt=""><br>
 MLOps is bridging the ML and IT<br>
-<img src="https://www.dropbox.com/s/apaytpgzc302qk9/c4w3_2.png?raw=1" alt=""></p>
+<img src="https://www.dropbox.com/s/apaytpgzc302qk9/c4w3_2.png?raw=1" alt=""><br>
+<strong>MLOps Level 0</strong> - Manual process<br>
+Less frequent releases, so no CI/CD<br>
+Lack of active performance monitoring - dangerous<br>
+Very common in real world</p>
+<p><strong>challenges</strong><br>
+retraining (e.g. new data, new requirements etc)<br>
+contentiously experimenting with new implementation</p>
+<p><strong>MLOps Level 1</strong> ML pipeline automation<br>
+automated deployment<br>
+rapid experimentation<br>
+automated data validation</p>
+<p><strong>MLOps Level 2</strong> CI/CD pipeline automation</p>
+<p><strong>TFX  - tensorflow extended</strong><br>
+Orchestrate your ML workflow</p>
+<p><a href="https://cloud.google.com/architecture/architecture-for-mlops-using-tfx-kubeflow-pipelines-and-cloud-build">https://cloud.google.com/architecture/architecture-for-mlops-using-tfx-kubeflow-pipelines-and-cloud-build</a></p>
+<p><strong>Model versioning</strong><br>
+Software versioning:<br>
+<img src="https://www.dropbox.com/s/g3a1mevph12v0rb/c4w3_3.png?raw=1" alt=""></p>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
