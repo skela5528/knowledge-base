@@ -33,6 +33,7 @@
 <ul>
 <li><a href="#experiments-management-and-tracking">Experiments Management and Tracking</a></li>
 <li><a href="#mlops">MLOps</a></li>
+<li><a href="#continuous-delivery">Continuous delivery</a></li>
 </ul>
 </li>
 <li><a href="#week-4">Week 4</a></li>
@@ -178,7 +179,13 @@ Orchestrate your ML workflow</p>
 <p><a href="https://cloud.google.com/architecture/architecture-for-mlops-using-tfx-kubeflow-pipelines-and-cloud-build">https://cloud.google.com/architecture/architecture-for-mlops-using-tfx-kubeflow-pipelines-and-cloud-build</a></p>
 <p><strong>Model versioning</strong><br>
 Software versioning:<br>
-<img src="https://www.dropbox.com/s/g3a1mevph12v0rb/c4w3_3.png?raw=1" alt=""></p>
+<img src="https://www.dropbox.com/s/g3a1mevph12v0rb/c4w3_3.png?raw=1" alt=""><br>
+<img src="https://www.dropbox.com/s/gjh6lmh1hlmew63/c4w3_4.png?raw=1" alt=""></p>
+<p>Machine Learning Model Management: What It Is, Why You Should Care, and How to Implement It<br>
+<a href="https://neptune.ai/blog/machine-learning-model-management">https://neptune.ai/blog/machine-learning-model-management</a></p>
+<h3 id="continuous-delivery">Continuous delivery</h3>
+<p><img src="https://www.dropbox.com/s/k4fu1qobwoci56l/c4w3_5.png?raw=1" alt=""><br>
+<img src="https://www.dropbox.com/s/ru7xz7srwqn1xex/c4w3_6.png?raw=1" alt=""></p>
 <h2 id="week-4">Week 4</h2>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
