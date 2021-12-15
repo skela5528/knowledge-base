@@ -25,6 +25,7 @@
 </ul>
 </li>
 <li><a href="#gnn---graph-neural-network">GNN - Graph Neural Network</a></li>
+<li><a href="#contrastive-learning">Contrastive Learning</a></li>
 </ul>
 </li>
 </ul>
@@ -100,7 +101,9 @@ b=0.5  2-last samples.</p>
 <p><em>Momentum (GD with momentum)</em><br>
 <a href="https://youtu.be/k8fTYJPd3_I?list=PL9fbVgKf1HGwmWyfsc14iMsBSsluM5bCP">video</a><br>
 Instead of gradient make use in exponential average of last gradients (momentum, acceleration)<br>
-Usually momentum=0.9 (last 10 batches average)</p>
+Usually momentum=0.9 (last 10 batches average)<br>
+Prevent jittering, allow to use bigger LR (faster learning).<br>
+Can overshoot.</p>
 <p><em>RMSprop</em> Root mean Square <a href="https://youtu.be/_e-LFe_igno?list=PL9fbVgKf1HGwmWyfsc14iMsBSsluM5bCP">video</a><br>
 [link] - (<a href="https://towardsdatascience.com/a-look-at-gradient-descent-and-rmsprop-optimizers-f77d483ef08b">https://towardsdatascience.com/a-look-at-gradient-descent-and-rmsprop-optimizers-f77d483ef08b</a>)<br>
 Exponential average of squares of gradients<br>
@@ -182,6 +185,18 @@ TP rate (Recall) vs FP rate: how many TP you are pay per FP.</p>
 A <strong>graph</strong> <em>G</em> can be well described by the set of vertices <em>V</em> and edges <em>E</em> it contains.</p>
 <p><strong>GNN</strong><br>
 Graph Neural Network is a type of Neural Network which directly operates on the Graph structure. A typical application of GNN is node classification. Essentially, every node in the graph is associated with a label, and we want to predict the label of the nodes without ground-truth.</p>
+<h2 id="contrastive-learning">Contrastive Learning</h2>
+<p><a href="https://towardsdatascience.com/understanding-contrastive-learning-d5b19fd96607">link to towardsdatascience.com</a></p>
+<p><a href="http://proceedings.mlr.press/v119/chen20j/chen20j.pdf">paper 3k cit, G. Hinton - SimCLR</a></p>
+<p><strong>Contrastive learning</strong> <em>is a machine learning technique used to learn</em>  <em>the</em> general features <em>of a dataset</em> <strong><em>without labels</em></strong> <em>by teaching the model which data points are similar</em>  <em>or</em>  <em>different</em>.</p>
+<p>Its a self-supervised learning.</p>
+<p>With contrastive learning, one can significantly improve model performance even when only a fraction of the dataset is labeled.</p>
+<p><strong>The SimCLr method in a nutshell:</strong></p>
+<ol>
+<li>Augment one image with 2 different augmentations -&gt; will recieve x_i and x_j pair which was derived from the same source image.</li>
+<li>Get feature representation of x_i and x_j. Just run inference with some big CNN. The goal is to train the model to output similar representations for similar images.</li>
+<li>Maximize the similarity of two vector representation by minimazing a contrastive loss function (e.g. CosSim, in paper used Normalized Temperature-Scaled Cross-Entropy Loss).</li>
+</ol>
 </div>
 </body>
 
