@@ -34,6 +34,7 @@
 <li><a href="#experiments-management-and-tracking">Experiments Management and Tracking</a></li>
 <li><a href="#mlops">MLOps</a></li>
 <li><a href="#continuous-delivery">Continuous delivery</a></li>
+<li><a href="#progressive-delivery">Progressive delivery</a></li>
 </ul>
 </li>
 <li><a href="#week-4">Week 4</a></li>
@@ -186,10 +187,39 @@ Software versioning:<br>
 <h3 id="continuous-delivery">Continuous delivery</h3>
 <p><img src="https://www.dropbox.com/s/k4fu1qobwoci56l/c4w3_5.png?raw=1" alt=""><br>
 <img src="https://www.dropbox.com/s/ru7xz7srwqn1xex/c4w3_6.png?raw=1" alt=""></p>
+<h3 id="progressive-delivery">Progressive delivery</h3>
+<p><img src="https://www.dropbox.com/s/o0buzqa6jipx16o/c4w3_7.png?raw=1" alt=""><br>
+<strong>Blue/Green deployment</strong><br>
+2 models on (previous and new)<br>
+load balancer decide when sent a requiest to green (new) or to blue (prev version) if something goes wrong.</p>
+<p><strong>Canary deployment</strong><br>
+Similar to blue/green<br>
+but the change is done gradually</p>
+<p>more details <a href="https://codefresh.io/docs/docs/ci-cd-guides/progressive-delivery/">here</a></p>
 <h2 id="week-4">Week 4</h2>
-<blockquote>
-<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
-</blockquote>
+<p><strong>Observability in ML</strong></p>
+<ul>
+<li>measure how well the internal states of a system can be inferred by knowing the inputs ad outputs.</li>
+</ul>
+<p>Goals of ML observability:</p>
+<ul>
+<li>Alertable</li>
+<li>Actionable: root cause clearly identified</li>
+</ul>
+<p><strong>Monitoring Targets in ML</strong><br>
+Basics inputs and outputs monitoring</p>
+<p>Input feature distribution<br>
+Model prediction distribution<br>
+model versions</p>
+<p>use statistical testing (median, mean, std, min, max values) for comparison</p>
+<p><strong>Loging</strong><br>
+is important for observability</p>
+<p>Understand the issue cause on distributed, cloud base system is much harder:<br>
+solution Dapper-Style tracing apps:</p>
+<ul>
+<li>propagate trace between services</li>
+<li></li>
+</ul>
 </div>
 </body>
 
